@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb", "airbnb/hooks", "airbnb-typescript", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "tailwind.config.ts",
+    "vite.config.ts",
+    "postcss.config.js"
+  ],
+  "plugins": ["react-refresh"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ]
+  }
+}
