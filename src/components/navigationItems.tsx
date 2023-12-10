@@ -65,18 +65,27 @@ export function NavigationItems({
   };
 
   useEffect(() => {
-    const handleScroll = () => {
+    const getActiveSection = (): string | null => {
       const refKeys = Object.keys(sectionsRefs.current);
+      const { clientHeight, scrollTop, scrollHeight } =
+        document.documentElement;
+      if (clientHeight + scrollTop >= scrollHeight) {
+        return refKeys[refKeys.length - 1];
+      }
       for (let i = 0; i < refKeys.length; i += 1) {
         const componentRef = sectionsRefs.current[refKeys[i]];
         if (componentRef) {
           const rect = componentRef.getBoundingClientRect();
           if (rect.bottom >= rect.height / 3) {
-            setActiveSection(refKeys[i]);
-            break;
+            return refKeys[i];
           }
         }
       }
+      return null;
+    };
+
+    const handleScroll = () => {
+      setActiveSection(getActiveSection());
     };
 
     window.addEventListener('scroll', handleScroll);
