@@ -7,7 +7,7 @@ import {
   UserRound,
 } from 'lucide-react';
 
-function ItemIcon({ name, isSelected }: { name: string; isSelected: boolean }) {
+function ItemIcon({ name }: { name: string }) {
   const icons: { [key: string]: any } = {
     'about-me': UserRound,
     education: GraduationCap,
@@ -18,15 +18,7 @@ function ItemIcon({ name, isSelected }: { name: string; isSelected: boolean }) {
 
   const Icon: LucideIcon | null = icons[name] ?? null;
 
-  return (
-    Icon && (
-      <Icon
-        size={20}
-        strokeWidth={1.5}
-        color={isSelected ? 'white' : '#4b5563'}
-      />
-    )
-  );
+  return Icon && <Icon size={20} strokeWidth={1.5} color="white" />;
 }
 
 export default ItemIcon;

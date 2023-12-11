@@ -1,0 +1,6 @@
+[submodule "elise-bayraktar-profile-page"]
+	path = elise-bayraktar-profile-page
+	url = git@plmlab.math.cnrs.fr:bayrakta/elise-bayraktar-profile-page.git
+[submodule "dist"]
+	path = dist
+	url = git@plmlab.math.cnrs.fr:bayrakta/elise-bayraktar-profile-page.git

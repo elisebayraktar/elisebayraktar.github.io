@@ -1,28 +1,28 @@
 import { cva } from 'class-variance-authority';
 import { useEffect, useState } from 'react';
 import ItemIcon from './NavigationItemIcon';
-import sections from './sections';
+import sections from '../utils/const';
 
 const navigationItemVariants = cva(
-  ['px-4', 'py-4', 'flex', 'space-x-2', 'rounded-lg', 'cursor-pointer'],
+  [
+    'px-4',
+    'py-3',
+    'flex',
+    'space-x-2',
+    'cursor-pointer',
+    'rounded',
+    'hover:border-white',
+    'border',
+  ],
   {
     variants: {
       selected: {
-        true: 'bg-primary',
-        false: 'bg-white',
+        true: ['bg-primary', 'border-white'],
+        false: ['bg-primary', 'border-primary'],
       },
     },
   },
 );
-
-const navigationItemTextVariants = cva(['text-sm', 'capitalize'], {
-  variants: {
-    selected: {
-      true: 'text-white',
-      false: 'text-slate-600',
-    },
-  },
-});
 
 interface INavigationItemProps {
   selected: boolean;
@@ -43,8 +43,8 @@ export function NavigationItem({
       type="button"
       className={navigationItemVariants({ selected })}
     >
-      <ItemIcon name={name} isSelected={selected} />
-      <span className={navigationItemTextVariants({ selected })}>
+      <ItemIcon name={name} />
+      <span className="text-sm capitalize font-roboto text-white">
         {children}
       </span>
     </button>
@@ -74,9 +74,10 @@ export function NavigationItems({
       }
       for (let i = 0; i < refKeys.length; i += 1) {
         const componentRef = sectionsRefs.current[refKeys[i]];
+
         if (componentRef) {
           const rect = componentRef.getBoundingClientRect();
-          if (rect.bottom >= rect.height / 3) {
+          if (rect.bottom - 80 >= 0) {
             return refKeys[i];
           }
         }
@@ -98,7 +99,7 @@ export function NavigationItems({
   }, [sectionsRefs]);
 
   return (
-    <div className="flex space-y-2 flex-col">
+    <div className="flex space-x-2 self-center">
       {sections.map((item) => (
         <NavigationItem
           name={item.name}

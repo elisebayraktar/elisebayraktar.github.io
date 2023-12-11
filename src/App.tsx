@@ -1,30 +1,40 @@
 import { useRef } from 'react';
-import { NavigationItems } from './components/NavigationItems';
-import sections from './components/sections';
+import Section from './components/Section';
+import sections from './utils/const';
+import { NavigationItems } from './components/navigationItems';
 
 function App() {
   const sectionsRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-  const screenRef = useRef<HTMLDivElement | null>(null);
+
+  const setRef = (name: string, ref: HTMLDivElement | null) => {
+    sectionsRefs.current[name] = ref;
+  };
+
   return (
-    <main className="flex flex-col bg-gray-50" ref={screenRef}>
-      <div className="fixed w-72 px-6 py-4 h-screen flex flex-col bg-white shadow-md">
-        <img
-          src="/images/logo.png"
-          alt="labo logo"
-          className="object-contain my-10 w-4/5 self-center"
-        />
-        <NavigationItems sectionsRefs={sectionsRefs} />
-      </div>
-      <div className="flex ml-72 p-10 overflow-auto flex-col space-y-10">
-        {sections.map((item) => (
+    <main className="flex flex-col bg-[#F5F5F5] text-neutral-800">
+      {window.innerWidth >= 768 && (
+        <div className="fixed h-20 px-6 py-4 w-screen flex bg-primary shadow-md justify-center items-center font-normal">
+          <NavigationItems sectionsRefs={sectionsRefs} />
+        </div>
+      )}
+      <div className="md:pt-20 overflow-auto flex flex-col">
+        {sections.map((item, index) => (
           <div
-            ref={(ref) => {
-              sectionsRefs.current[item.name] = ref;
-            }}
             key={item.name}
-            className="scroll-m-10"
+            className="flex items-center justify-center flex-col"
           >
-            <item.content />
+            <Section
+              index={index}
+              item={item}
+              setRef={(ref) => setRef(item.name, ref)}
+            />
+            {index !== sections.length - 1 && (
+              <img
+                src="/images/divider.svg"
+                alt="divider"
+                className="h-6 md:h-8 text-primary place-self-center"
+              />
+            )}
           </div>
         ))}
       </div>

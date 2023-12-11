@@ -4,12 +4,7 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "ignorePatterns": [
-    "node_modules",
-    "tailwind.config.ts",
-    "vite.config.ts",
-    "postcss.config.js"
-  ],
+  "ignorePatterns": ["node_modules", "**.config.ts", "**.config.js", "dist"],
   "plugins": ["react-refresh"],
   "rules": {
     "react/react-in-jsx-scope": "off",

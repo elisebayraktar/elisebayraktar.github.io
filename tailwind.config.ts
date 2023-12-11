@@ -6,8 +6,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#007791',
-        'primary-light': '#f0fcff',
+        'primary-200': '#C5DADF',
+        'primary-100': '#E8F1F2',
+        secondary: '#FF6B6B',
+        menth: '#A9E5D7',
       },
+    },
+    fontFamily: {
+      sans: ['Lato', 'sans-serif'],
+      title: ['Montserrat', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
     },
   },
   plugins: [],
