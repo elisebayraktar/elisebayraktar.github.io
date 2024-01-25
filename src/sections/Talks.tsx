@@ -1,6 +1,4 @@
-import Column from '../components/Column';
 import Link from '../components/Link';
-import Separator from '../components/Separator';
 
 const talks = [
   {
@@ -33,11 +31,11 @@ const talks = [
 export default function Talks() {
   return talks.map((talk, index) => (
     <>
-      <Column key={talk.label}>
+      <div className="column" key={talk.label}>
         <Link label={talk.label} href={talk.href} />
         {talk.dateAndPlace}
-      </Column>
-      {index < talks.length - 1 && <Separator />}
+      </div>
+      {index < talks.length - 1 && <div className="divider" />}
     </>
   ));
 }

@@ -3,26 +3,14 @@ import { useEffect, useState } from 'react';
 import ItemIcon from './NavigationItemIcon';
 import sections from '../utils/const';
 
-const navigationItemVariants = cva(
-  [
-    'px-4',
-    'py-3',
-    'flex',
-    'space-x-2',
-    'cursor-pointer',
-    'rounded',
-    'hover:border-white',
-    'border',
-  ],
-  {
-    variants: {
-      selected: {
-        true: ['bg-primary', 'border-white'],
-        false: ['bg-primary', 'border-primary'],
-      },
+const navigationItemVariants = cva(['btn', 'btn-primary'], {
+  variants: {
+    selected: {
+      true: ['border-white', 'hover:border-white'],
+      false: [],
     },
   },
-);
+});
 
 interface INavigationItemProps {
   selected: boolean;
@@ -44,9 +32,7 @@ export function NavigationItem({
       className={navigationItemVariants({ selected })}
     >
       <ItemIcon name={name} />
-      <span className="text-sm capitalize font-roboto text-white">
-        {children}
-      </span>
+      <span className="text-sm capitalize font-roboto">{children}</span>
     </button>
   );
 }
@@ -99,7 +85,7 @@ export function NavigationItems({
   }, [sectionsRefs]);
 
   return (
-    <div className="flex space-x-2 self-center">
+    <div className="navbar-center space-x-2">
       {sections.map((item) => (
         <NavigationItem
           name={item.name}

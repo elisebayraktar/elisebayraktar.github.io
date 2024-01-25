@@ -11,18 +11,15 @@ function App() {
   };
 
   return (
-    <main className="flex flex-col bg-[#F5F5F5] text-neutral-800">
-      {window.innerWidth >= 768 && (
-        <div className="fixed h-20 px-6 py-4 w-screen flex bg-primary shadow-md justify-center items-center font-normal">
+    <>
+      <header>
+        <div className="navbar bg-primary py-4 justify-center fixed z-50">
           <NavigationItems sectionsRefs={sectionsRefs} />
         </div>
-      )}
-      <div className="md:pt-20 overflow-auto flex flex-col">
+      </header>
+      <main className="column light justify-normal pt-20">
         {sections.map((item, index) => (
-          <div
-            key={item.name}
-            className="flex items-center justify-center flex-col"
-          >
+          <div key={item.name} className="column items-center justify-center">
             <Section
               index={index}
               item={item}
@@ -32,13 +29,13 @@ function App() {
               <img
                 src="/images/divider.svg"
                 alt="divider"
-                className="h-6 md:h-8 text-primary place-self-center"
+                className="h-6 md:h-8 text-primary"
               />
             )}
           </div>
         ))}
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 

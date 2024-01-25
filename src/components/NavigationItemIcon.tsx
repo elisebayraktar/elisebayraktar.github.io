@@ -18,7 +18,7 @@ function ItemIcon({ name }: { name: string }) {
 
   const Icon: LucideIcon | null = icons[name] ?? null;
 
-  return Icon && <Icon size={20} strokeWidth={1.5} color="white" />;
+  return Icon && <Icon size={20} strokeWidth={1.5} />;
 }
 
 export default ItemIcon;

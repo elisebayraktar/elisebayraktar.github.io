@@ -12,4 +12,4 @@ export default function Link({ label, href, className }: ILink) {
   );
 }
 
-Link.defaultProps = { className: 'text-primary' };
+Link.defaultProps = { className: 'link-primary link-hover' };

@@ -1,6 +1,3 @@
-import { twMerge } from 'tailwind-merge';
-import { boxClassName, titleClassName } from '../utils/style';
-
 export type SectionType = {
   name: string;
   content: () => JSX.Element;
@@ -15,16 +12,13 @@ interface ISection {
 export default function Section({ item, index, setRef }: ISection) {
   if (index === 0)
     return (
-      <div
-        className={twMerge(boxClassName, 'lg:flex-row')}
-        ref={(ref) => setRef(ref)}
-      >
+      <div className="box lg:flex-row" ref={(ref) => setRef(ref)}>
         <item.content />
       </div>
     );
   return (
-    <div className={boxClassName} ref={(ref) => setRef(ref)}>
-      <div className={titleClassName}>{item.name}</div>
+    <div className="box" ref={(ref) => setRef(ref)}>
+      <h2>{item.name}</h2>
       <item.content />
     </div>
   );
