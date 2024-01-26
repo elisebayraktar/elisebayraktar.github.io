@@ -10,7 +10,7 @@ interface INavigationItemProps {
 const navigationItemVariants = cva(['btn', 'btn-primary'], {
   variants: {
     selected: {
-      true: ['border-white', 'hover:border-white'],
+      true: ['border-primary-content', 'hover:border-primary-content'],
       false: [],
     },
   },

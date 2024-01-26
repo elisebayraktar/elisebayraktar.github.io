@@ -30,12 +30,10 @@ const talks = [
 
 export default function Talks() {
   return talks.map((talk, index) => (
-    <>
-      <div className="column" key={talk.label}>
-        <Link label={talk.label} href={talk.href} />
-        {talk.dateAndPlace}
-      </div>
+    <div key={talk.label} className="column">
+      <Link label={talk.label} href={talk.href} />
+      {talk.dateAndPlace}
       {index < talks.length - 1 && <div className="divider" />}
-    </>
+    </div>
   ));
 }

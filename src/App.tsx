@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import Section from './components/Section';
 import sections from './utils/const';
 import NavigationBar from './components/navigation/NavigationBar';
+import Divider from './components/Divider';
 
 function App() {
   const sectionsRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
@@ -24,11 +25,7 @@ function App() {
               setRef={(ref) => setRef(item.name, ref)}
             />
             {index !== sections.length - 1 && (
-              <img
-                src="/images/divider.svg"
-                alt="divider"
-                className="h-6 md:h-8 text-primary"
-              />
+              <Divider className="fill-primary h-6 md:h-8" />
             )}
           </div>
         ))}
