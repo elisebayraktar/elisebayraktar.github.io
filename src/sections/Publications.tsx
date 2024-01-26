@@ -6,10 +6,11 @@ export default function Publications() {
       <div>
         Estimation of a pure-jump stable Cox-Ingersoll-Ross process (
         <Link label="HAL" href="https://hal.science/hal-04037024v3" />
-        ,
-        <Link label=" Arxiv" href="https://arxiv.org/abs/2304.02386" />) (with
+        ,&#32;
+        <Link label="Arxiv" href="https://arxiv.org/abs/2304.02386" />)
+        (with&#32;
         <Link
-          label=" Emmanuelle Clément"
+          label="Emmanuelle Clément"
           href="https://perso.math.u-pem.fr/clement.emmanuelle/"
         />
         ) (in revision with Bernoulli)

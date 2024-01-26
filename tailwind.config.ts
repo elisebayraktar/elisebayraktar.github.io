@@ -17,6 +17,7 @@ const config: Config = {
           'primary-content': '#ffffff',
           neutral: '#C5DADF',
           'base-100': '#F5F5F5',
+          'base-200': '#ffffff',
           'base-content': '#262626',
         },
       },

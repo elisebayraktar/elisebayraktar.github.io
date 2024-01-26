@@ -1,43 +1,8 @@
-import { cva } from 'class-variance-authority';
+import { Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import ItemIcon from './NavigationItemIcon';
-import sections from '../utils/const';
+import NavigationItems from './NavigationItems';
 
-const navigationItemVariants = cva(['btn', 'btn-primary'], {
-  variants: {
-    selected: {
-      true: ['border-white', 'hover:border-white'],
-      false: [],
-    },
-  },
-});
-
-interface INavigationItemProps {
-  selected: boolean;
-  name: string;
-  children: string;
-  onClick: () => void;
-}
-
-export function NavigationItem({
-  selected,
-  name,
-  children,
-  onClick,
-}: INavigationItemProps) {
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      className={navigationItemVariants({ selected })}
-    >
-      <ItemIcon name={name} />
-      <span className="text-sm capitalize font-roboto">{children}</span>
-    </button>
-  );
-}
-
-export function NavigationItems({
+export default function NavigationBar({
   sectionsRefs,
 }: {
   sectionsRefs: React.MutableRefObject<{
@@ -49,7 +14,6 @@ export function NavigationItems({
   const handleClick = (key: string) => {
     sectionsRefs.current[key]?.scrollIntoView({ behavior: 'smooth' });
   };
-
   useEffect(() => {
     const getActiveSection = (): string | null => {
       const refKeys = Object.keys(sectionsRefs.current);
@@ -85,17 +49,27 @@ export function NavigationItems({
   }, [sectionsRefs]);
 
   return (
-    <div className="navbar-center space-x-2">
-      {sections.map((item) => (
-        <NavigationItem
-          name={item.name}
-          selected={activeSection === item.name}
-          key={item.name}
-          onClick={() => handleClick(item.name)}
-        >
-          {item.name.replace('-', ' ')}
-        </NavigationItem>
-      ))}
+    <div className="navbar bg-primary fixed z-50">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-primary lg:hidden">
+            <Menu />
+          </div>
+          <div className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-primary">
+            <NavigationItems
+              activeSection={activeSection}
+              handleClick={handleClick}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="navbar-center hidden lg:flex space-x-4">
+        <NavigationItems
+          activeSection={activeSection}
+          handleClick={handleClick}
+        />
+      </div>
+      <div className="navbar-end" />
     </div>
   );
 }

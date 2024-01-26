@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Section from './components/Section';
 import sections from './utils/const';
-import { NavigationItems } from './components/navigationItems';
+import NavigationBar from './components/navigation/NavigationBar';
 
 function App() {
   const sectionsRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
@@ -13,11 +13,9 @@ function App() {
   return (
     <>
       <header>
-        <div className="navbar bg-primary py-4 justify-center fixed z-50">
-          <NavigationItems sectionsRefs={sectionsRefs} />
-        </div>
+        <NavigationBar sectionsRefs={sectionsRefs} />
       </header>
-      <main className="column light justify-normal pt-20">
+      <main className="column justify-normal pt-20">
         {sections.map((item, index) => (
           <div key={item.name} className="column items-center justify-center">
             <Section
