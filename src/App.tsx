@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import Section from './components/Section';
 import sections from './utils/const';
 import NavigationBar from './components/navigation/NavigationBar';
-import Divider from './components/Divider';
+import Divider from './components/svg/Divider';
 
 function App() {
   const sectionsRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
