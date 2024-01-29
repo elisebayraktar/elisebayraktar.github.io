@@ -23,6 +23,7 @@ export default function Teaching() {
           </div>
         </div>
       </div>
+      <div className="divider lg:hidden" />
       <div className="column">
         <h3 className="mb-2">CentraleSupélec</h3>
         <div className="font-semibold">2019 -2020</div>

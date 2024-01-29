@@ -3,20 +3,12 @@
 @import 'tailwindcss/utilities';
 
 @layer components {
-  .title {
-    @apply text-3xl text-primary font-semibold capitalize w-fit px-4 py-3 border-primary border-2 rounded-sm mb-4;
-  }
-
   .box {
     @apply flex scroll-mt-28  md:bg-base-200 p-8 md:py-12 md:px-16 items-center flex-col text-center rounded-2xl mx-4 my-4 md:my-10 md:w-2/3 border-primary md:border-2 md:shadow-xl;
   }
 
   .subtext {
     @apply text-sm font-light;
-  }
-
-  .subtitle {
-    @apply text-xl font-semibold capitalize;
   }
 
   .column {
@@ -30,11 +22,11 @@
 
 @layer base {
   h1 {
-    @apply text-primary font-title text-5xl md:text-6xl font-extrabold uppercase self-center;
+    @apply text-primary font-montserrat text-5xl md:text-6xl font-extrabold uppercase self-center;
   }
 
   h2 {
-    @apply text-3xl text-primary font-semibold capitalize w-fit px-4 py-3 border-primary border-2 rounded-sm mb-4;
+    @apply text-3xl text-primary font-semibold capitalize w-fit mb-4;
   }
 
   h3 {
