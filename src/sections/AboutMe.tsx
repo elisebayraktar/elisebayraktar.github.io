@@ -16,7 +16,7 @@ export default function AboutMe() {
       <img
         alt="profile"
         src="images/profile-picture.jpeg"
-        className="lg:w-1/4 object-cover rounded-full border-2 border-primary max-w-sm mt-5 lg:mt-0"
+        className="lg:w-1/4 object-cover rounded-full border-2 border-primary max-w-4/5 mt-5 lg:mt-0"
       />
     </>
   );
