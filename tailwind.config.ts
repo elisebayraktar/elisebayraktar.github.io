@@ -1,37 +1,31 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ['Lato', 'sans-serif'],
-      montserrat: ['Montserrat', 'sans-serif'],
-      roboto: ['Roboto', 'sans-serif'],
+      sans: ["Lato", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
     },
   },
   daisyui: {
     themes: [
       {
         light: {
-          primary: '#007791',
-          'primary-content': '#ffffff',
-          neutral: '#C5DADF',
-          'base-100': '#F5F5F5',
-          'base-200': '#ffffff',
-          'base-content': '#262626',
+          ...require("daisyui/src/theming/themes").light,
+          primary: "#007791",
+          secondary: "#005F74",
         },
         dark: {
-          primary: '#6fa3b5',
-          'primary-content': '#121212',
-          neutral: '#C5DADF',
-          'base-100': '#282828',
-          'base-200': '#3f3f3f',
-          'base-content': '#ffffff',
+          ...require("daisyui/src/theming/themes").dark,
+          primary: "#007791",
+          secondary: "#87b2c1",
         },
       },
     ],
   },
-  plugins: [require('daisyui')],
+  plugins: [require("daisyui")],
 };
 
 export default config;

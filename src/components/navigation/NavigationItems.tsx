@@ -1,5 +1,5 @@
-import sections from '../../utils/const';
-import NavigationItem from './NavigationItem';
+import sections from "../../utils/const";
+import NavigationItem from "./NavigationItem";
 
 interface INavigationItemsProps {
   activeSection: string | null;
@@ -17,7 +17,7 @@ export default function NavigationItems({
       key={item.name}
       onClick={() => handleClick(item.name)}
     >
-      {item.name.replace('-', ' ')}
+      {item.name.replace("-", " ")}
     </NavigationItem>
   ));
 }

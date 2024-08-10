@@ -1,10 +1,14 @@
-export default function CentraleSupelec({ className }: { className?: string }) {
+export default function CentraleSupelec({
+  className = "",
+}: Readonly<{ className?: string }>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 700 363"
       className={className}
+      aria-labelledby="title"
     >
+      <title id="title">CentraleSupelec Logo</title>
       <g fill="#b00739">
         <path d="M407.392 154.69c-5.363-11.368-19.453-15.881-31.49-10.061-12.03 5.802-20.748 21.32-15.376 32.689 5.353 11.37 22.753 14.284 34.772 8.474 12.029-5.811 17.438-19.722 12.094-31.101" />
         <path d="M459.777 129.513c-14.127-29.896-43.62-47.422-74.344-47.395a81.478 81.478 0 0 0-35.392 8.11c-11.372 5.484-21.006 13.312-28.476 22.637l28.606 23.43c4.114-5.12 9.356-9.408 15.726-12.481 6.37-3.065 12.981-4.485 19.527-4.485a45.4 45.4 0 0 1 41.115 26.196c3.033 6.437 4.438 13.108 4.448 19.75-.019 17.19-9.542 33.661-25.925 41.536-6.25 3-12.713 4.429-19.139 4.494v37.211a81.775 81.775 0 0 0 34.986-8.119c29.586-14.275 46.921-44.087 46.894-75.131a83.524 83.524 0 0 0-8.026-35.753" />
@@ -17,7 +21,3 @@ export default function CentraleSupelec({ className }: { className?: string }) {
     </svg>
   );
 }
-
-CentraleSupelec.defaultProps = {
-  className: '',
-};

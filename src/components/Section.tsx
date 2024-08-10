@@ -9,7 +9,7 @@ interface ISection {
   setRef: (ref: HTMLDivElement | null) => void;
 }
 
-export default function Section({ item, index, setRef }: ISection) {
+export default function Section({ item, index, setRef }: Readonly<ISection>) {
   if (index === 0)
     return (
       <div className="box lg:flex-row" ref={(ref) => setRef(ref)}>

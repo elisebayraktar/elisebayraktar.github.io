@@ -2,14 +2,18 @@ import {
   BookOpenText,
   GraduationCap,
   LibraryBig,
-  LucideIcon,
+  type LucideIcon,
   Presentation,
   UserRound,
-} from 'lucide-react';
+} from "lucide-react";
 
-function ItemIcon({ name }: { name: string }) {
-  const icons: { [key: string]: any } = {
-    'about-me': UserRound,
+interface IItemIconProps {
+  name: string;
+}
+
+function ItemIcon({ name }: IItemIconProps) {
+  const icons: { [key: string]: LucideIcon } = {
+    "about-me": UserRound,
     education: GraduationCap,
     talks: Presentation,
     publications: LibraryBig,

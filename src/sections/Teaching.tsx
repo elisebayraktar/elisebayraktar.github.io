@@ -1,37 +1,107 @@
+import { Fragment } from "react/jsx-runtime";
+
+type TeachingDetails = {
+  subject: string;
+  details: { year: string; teachingGroup: string }[];
+};
+
+type Teaching = {
+  university: string;
+  details: TeachingDetails[];
+};
+
+const teaching: Teaching[] = [
+  {
+    university: "Université Gustave Eiffel",
+    details: [
+      {
+        subject: "Probabilités",
+        details: [
+          {
+            year: "2024-2025",
+            teachingGroup: " L2 Économie et gestion",
+          },
+        ],
+      },
+      {
+        subject: "Statistiques descriptives",
+        details: [
+          {
+            year: "2024-2025",
+            teachingGroup: " L1 Économie et gestion",
+          },
+        ],
+      },
+      {
+        subject: "Suites et fonctions",
+        details: [
+          {
+            year: "2023-2024",
+            teachingGroup: " L1 Maths-Info",
+          },
+          {
+            year: "2022-2023",
+            teachingGroup: " L1 Maths-Info",
+          },
+        ],
+      },
+      {
+        subject: "Méthodologie des mathématiques",
+        details: [
+          {
+            year: "2023-2024",
+            teachingGroup: " L1 Maths-Info",
+          },
+          {
+            year: "2022-2023",
+            teachingGroup: " L1 MIASHS",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    university: "CentraleSupélec",
+    details: [
+      {
+        subject:
+          "Convergence Intégration Probabilités, Équation aux Dérivées Partielles",
+        details: [
+          {
+            year: "2019-2020",
+            teachingGroup: "TD de Modalité renforcée - 1ère année",
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export default function Teaching() {
-  return (
-    <>
-      <div className="column space-y-4">
-        <h3>Université Gustave Eiffel</h3>
-        <div className="column lg:flex-row lg:space-x-8">
-          <div className="column">
-            <div className="font-semibold">2023-2024</div>
-            <div>Méthodologie des mathématiques</div>
-            <div className="subtext">TD - L1 MIASHS</div>
-            <div className="divider w-5 lg:w-5" />
-            <div>Suites et fonctions</div>
-            <div className="subtext">TD - L1 Maths-Info</div>
-          </div>
-          <div className="divider divider-horizontal lg:w-0 lg:h-16" />
-          <div className="column">
-            <div className="font-semibold">2022-2023</div>
-            <div>Méthodologie des mathématiques</div>
-            <div className="subtext mb-2">TD - L1 Maths-Info</div>
-            <div className="divider w-5 lg:w-5" />
-            <div className="mt-1">Suites et fonctions</div>
-            <div className="subtext">TD - L1 Maths-Info</div>
-          </div>
-        </div>
+  return teaching.map(({ university, details }, index) => (
+    <div key={university} className="column">
+      {index !== 0 && <div className="custom-divider" />}
+      <h3>{university}</h3>
+      <div className="column mt-4">
+        {details.map(({ subject, details }, index) => (
+          <Fragment key={subject}>
+            {index !== 0 && <div className="custom-divider w-5 my-1" />}
+            <div className="font-semibold">{subject}</div>
+            <div className="column">
+              {details.map(({ year, teachingGroup }) => (
+                <div
+                  key={`${teachingGroup}-${year}`}
+                  className="flex justify-center"
+                >
+                  <div>
+                    {year} - <span className="subtext">{teachingGroup}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Fragment>
+        ))}
       </div>
-      <div className="divider lg:hidden" />
-      <div className="column">
-        <h3 className="mb-2">CentraleSupélec</h3>
-        <div className="font-semibold">2019 -2020</div>
-        <div>
-          Convergence Intégration Probabilités, Équation aux Dérivées Partielles
-        </div>
-        <div className="subtext">TD de Modalité renforcée - 1ère année</div>
-      </div>
-    </>
-  );
+    </div>
+  ));
 }

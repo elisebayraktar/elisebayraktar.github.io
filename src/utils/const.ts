@@ -1,29 +1,29 @@
-import { SectionType } from '../components/Section';
-import AboutMe from '../sections/AboutMe';
-import Education from '../sections/Education';
-import Publications from '../sections/Publications';
-import Talks from '../sections/Talks';
-import Teaching from '../sections/Teaching';
+import type { SectionType } from "../components/Section";
+import AboutMe from "../sections/AboutMe";
+import Educations from "../sections/Education";
+import Publications from "../sections/Publications";
+import Talks from "../sections/Talks";
+import Teachings from "../sections/Teaching";
 
 export default [
   {
-    name: 'about-me',
+    name: "about-me",
     content: AboutMe,
   },
   {
-    name: 'publications',
+    name: "publications",
     content: Publications,
   },
   {
-    name: 'talks',
+    name: "talks",
     content: Talks,
   },
   {
-    name: 'education',
-    content: Education,
+    name: "education",
+    content: Educations,
   },
   {
-    name: 'teaching',
-    content: Teaching,
+    name: "teaching",
+    content: Teachings,
   },
 ] as SectionType[];

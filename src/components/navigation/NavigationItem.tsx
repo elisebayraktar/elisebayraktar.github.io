@@ -1,5 +1,5 @@
-import { cva } from 'class-variance-authority';
-import ItemIcon from './NavigationItemIcon';
+import { cva } from "class-variance-authority";
+import ItemIcon from "./NavigationItemIcon";
 
 interface INavigationItemProps {
   selected: boolean;
@@ -7,10 +7,10 @@ interface INavigationItemProps {
   children: string;
   onClick: () => void;
 }
-const navigationItemVariants = cva(['btn', 'btn-primary'], {
+const navigationItemVariants = cva(["btn", "btn-primary", "shadow-none"], {
   variants: {
     selected: {
-      true: ['border-primary-content', 'hover:border-primary-content'],
+      true: ["border-primary-content", "hover:border-primary-content"],
       false: [],
     },
   },
@@ -21,7 +21,7 @@ export default function NavigationItem({
   name,
   children,
   onClick,
-}: INavigationItemProps) {
+}: Readonly<INavigationItemProps>) {
   return (
     <button
       onClick={onClick}

@@ -1,7 +1,7 @@
-import Cambridge from '../components/svg/Cambridge';
-import CentraleSupelec from '../components/svg/CentraleSupelec';
+import Cambridge from "../components/svg/Cambridge";
+import CentraleSupelec from "../components/svg/CentraleSupelec";
 
-export default function Education() {
+export default function Educations() {
   return (
     <div className="column space-y-8 w-fit text-left">
       <div className="flex items-center space-x-7">
@@ -13,7 +13,7 @@ export default function Education() {
           <div className="subtext">2020 - 2021</div>
         </div>
       </div>
-      <div className="divider" />
+      <div className="custom-divider" />
       <div className="flex items-center space-x-7">
         <CentraleSupelec className="fill-base-content w-20" />
         <div className="flex flex-col w-9/10">

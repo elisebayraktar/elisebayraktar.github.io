@@ -4,7 +4,7 @@
 
 @layer components {
   .box {
-    @apply flex scroll-mt-28  md:bg-base-200 p-8 md:py-12 md:px-16 items-center flex-col text-center rounded-2xl mx-4 my-4 md:my-10 md:w-2/3 border-primary md:border-2 md:shadow-xl;
+    @apply flex scroll-mt-28  md:bg-base-100 p-8 md:py-12 md:px-16 items-center flex-col text-center rounded-2xl mx-4 my-4 md:my-10 md:w-2/3 border-primary md:border-2 md:shadow-xl;
   }
 
   .subtext {
@@ -15,8 +15,8 @@
     @apply flex flex-col justify-center;
   }
 
-  .divider {
-    @apply self-center divider-neutral w-24 lg:w-52;
+  .custom-divider {
+    @apply self-center divider w-24 lg:w-52;
   }
 }
 
