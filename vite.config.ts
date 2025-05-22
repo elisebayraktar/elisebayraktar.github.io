@@ -1,25 +1,15 @@
-import react from "@vitejs/plugin-react";
-import Unfonts from "unplugin-fonts/vite";
-import { defineConfig } from "vite";
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    Unfonts({
-      google: {
-        families: [
-          {
-            name: "Montserrat",
-            styles: "wght@700",
-          },
-          {
-            name: "Lato",
-            styles: "wght@100;300;400;600;700",
-          },
-        ],
-      },
-    }),
-  ],
-  base: "/bayraktar.elise/",
-});
+  base: '/bayraktar.elise/',
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+})

@@ -1,16 +1,24 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-const rootElement = document.getElementById("root");
+import { ThemeProvider } from '@/components/theme-provider'
+
+import './index.css'
+
+import '@fontsource-variable/ibm-plex-sans'
+
+import App from './app'
+
+const rootElement = document.getElementById('root')
 
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </React.StrictMode>
+  )
 } else {
-  throw new Error("Root element not found");
+  throw new Error('Root element not found')
 }
