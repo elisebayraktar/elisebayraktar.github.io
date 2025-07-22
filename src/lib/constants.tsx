@@ -1,15 +1,21 @@
-import { BookIcon, GraduationCapIcon, PencilIcon, PresentationIcon, UserIcon } from 'lucide-react'
+import {
+  BookIcon,
+  GraduationCapIcon,
+  PencilIcon,
+  PresentationIcon,
+  UserIcon,
+} from 'lucide-react';
 
-import AboutMe from '@/components/sections/about-me'
-import Educations from '@/components/sections/education'
-import Publications from '@/components/sections/publications'
-import Talks from '@/components/sections/talks'
-import Teaching from '@/components/sections/teaching'
+import AboutMe from '@/components/sections/about-me';
+import Educations from '@/components/sections/education';
+import Publications from '@/components/sections/publications';
+import Talks from '@/components/sections/talks';
+import Teaching from '@/components/sections/teaching';
 
 export interface SectionType {
-  content: React.ReactNode
-  icon: React.ReactNode
-  slug: string
+  content: React.ReactNode;
+  icon: React.ReactNode;
+  slug: string;
 }
 
 export const sections = [
@@ -43,4 +49,4 @@ export const sections = [
     slug: 'teaching',
     title: 'Teaching',
   },
-]
+];

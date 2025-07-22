@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - '@evilmartians/lefthook'
+  - '@tailwindcss/oxide'
+  - esbuild

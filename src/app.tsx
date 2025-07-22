@@ -1,13 +1,17 @@
-import { ThemeToggle } from '@/components/theme-toggle'
-import { Button } from '@/components/ui/button'
-import { sections } from '@/lib/constants'
+import { ThemeToggle } from '@/components/theme-toggle';
+import { Button } from '@/components/ui/button';
+import { sections } from '@/lib/constants';
 
 function App() {
   return (
     <div className="flex flex-col items-center">
-      <header className="bg-primary/60 text-primary-foreground/95 sticky top-4 z-50 container flex w-full items-center justify-between rounded-lg px-4 backdrop-blur">
+      <header className="container sticky top-4 z-50 flex w-full items-center justify-between rounded-lg bg-primary/60 px-4 text-primary-foreground/95 backdrop-blur">
         <nav className="flex h-16 items-center gap-2 md:gap-4">
-          <img alt="logo of the university" className="h-10" src="images/lama.png" />
+          <img
+            alt="logo of the university"
+            className="h-10"
+            src="images/lama.png"
+          />
           {sections.map((section) => (
             <Button asChild key={section.slug} variant="ghost">
               <a href={`#${section.slug}`}>
@@ -27,14 +31,14 @@ function App() {
             key={section.slug}
           >
             {section.slug !== 'about-me' && (
-              <h2 className="text-4xl font-bold capitalize">{section.title}</h2>
+              <h2 className="font-bold text-4xl capitalize">{section.title}</h2>
             )}
             <section.content />
           </section>
         ))}
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

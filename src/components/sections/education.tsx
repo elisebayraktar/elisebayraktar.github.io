@@ -1,7 +1,7 @@
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card';
 
-import Cambridge from '../icons/cambridge'
-import CentraleSupelec from '../icons/centrale-suplec'
+import Cambridge from '../icons/cambridge';
+import CentraleSupelec from '../icons/centrale-suplec';
 
 export default function Educations() {
   return (
@@ -9,7 +9,7 @@ export default function Educations() {
       <Card className="flex-1">
         <CardContent className="flex w-full flex-row">
           <div className="flex items-center space-x-7">
-            <Cambridge className="fill-base-content w-20" />
+            <Cambridge className="w-20 fill-base-content" />
             <div className="flex w-9/10 flex-col">
               <h3>University of Cambridge</h3>
               <div>Master of Advanced Study in Mathematics - Part III</div>
@@ -33,5 +33,5 @@ export default function Educations() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
