@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 export default function AboutMe() {
   return (
-    <div className="container flex md:px-20">
+    <div className="container flex flex-col items-center md:flex-row md:justify-between md:px-20">
       <div className="flex flex-col space-y-4 md:space-y-8 lg:w-3/4 lg:pr-8">
         <h1>Elise Bayraktar</h1>
         <div>
@@ -21,8 +21,9 @@ export default function AboutMe() {
       </div>
       <img
         alt="Elise Bayraktar"
-        className="mt-5 w-3/4 rounded-full border-2 border-primary object-cover lg:mt-0 lg:w-1/4"
-        src="images/profile-picture.jpeg"
+        className="mt-5 aspect-square w-3/4 rounded-full border-2 border-primary object-cover lg:mt-0 lg:w-1/4"
+        fetchPriority="high"
+        src="images/profile-picture.webp"
       />
     </div>
   );

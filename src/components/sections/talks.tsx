@@ -53,7 +53,10 @@ const talks: Talk[] = [
 
 export default function Talks() {
   return talks.map((talk, index) => (
-    <div className="flex w-full flex-col items-center" key={talk.label}>
+    <div
+      className="flex w-full flex-col items-center text-center"
+      key={talk.label}
+    >
       {index !== 0 && <Separator className="my-4 max-w-3xs" />}
       <div>
         <Link href={talk.link}>{talk.label}</Link>

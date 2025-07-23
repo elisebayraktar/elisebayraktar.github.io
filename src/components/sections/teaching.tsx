@@ -81,7 +81,10 @@ const teaching: Teaching[] = [
 
 export default function Teaching() {
   return teaching.map(({ details, university }, index) => (
-    <div className="flex w-full flex-col items-center" key={university}>
+    <div
+      className="flex w-full flex-col items-center text-center"
+      key={university}
+    >
       {index !== 0 && <Separator className="my-4 max-w-3xs" />}
       <h3>{university}</h3>
       <div className="mt-4 flex w-full flex-col items-center">

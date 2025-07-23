@@ -4,16 +4,21 @@ import { sections } from '@/lib/constants';
 
 function App() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center px-4">
       <header className="container sticky top-4 z-50 flex w-full items-center justify-between rounded-lg bg-primary/60 px-4 text-primary-foreground/95 backdrop-blur">
         <nav className="flex h-16 items-center gap-2 md:gap-4">
           <img
             alt="logo of the university"
             className="h-10"
-            src="images/lama.png"
+            src="images/lama.webp"
           />
           {sections.map((section) => (
-            <Button asChild key={section.slug} variant="ghost">
+            <Button
+              asChild
+              className="hidden md:flex"
+              key={section.slug}
+              variant="ghost"
+            >
               <a href={`#${section.slug}`}>
                 {section.icon}
                 {section.title}
@@ -23,7 +28,7 @@ function App() {
         </nav>
         <ThemeToggle />
       </header>
-      <main className="flex flex-col items-center gap-8 py-24">
+      <main className="flex flex-col items-center gap-8 pt-8 pb-24 md:pt-24">
         {sections.map((section) => (
           <section
             className="container flex scroll-mt-24 flex-col items-center"

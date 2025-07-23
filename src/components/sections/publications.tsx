@@ -42,7 +42,7 @@ const publications: Publication[] = [
 export default function Publications() {
   return (
     <Card className="flex flex-col">
-      <CardContent className="flex flex-col items-center">
+      <CardContent className="flex flex-col items-center text-center">
         {publications.map(
           ({ halId, coAuthor, label, status: additionalInfos }, index) => (
             <Fragment key={halId}>
