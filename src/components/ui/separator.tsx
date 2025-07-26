@@ -1,7 +1,7 @@
-import { Root as SeparatorRoot } from '@radix-ui/react-separator';
-import type * as React from 'react';
+import { Root as SeparatorRoot } from '@radix-ui/react-separator'
+import type * as React from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 function Separator({
   className,
@@ -20,7 +20,7 @@ function Separator({
       orientation={orientation}
       {...props}
     />
-  );
+  )
 }
 
-export { Separator };
+export { Separator }

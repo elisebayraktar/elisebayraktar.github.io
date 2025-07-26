@@ -1,59 +1,59 @@
-import { Fragment } from 'react/jsx-runtime';
+import { Fragment } from 'react/jsx-runtime'
 
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@/components/ui/separator'
 
 interface Teaching {
-  details: TeachingDetails[];
-  university: string;
+  details: TeachingDetails[]
+  university: string
 }
 
 interface TeachingDetails {
-  lesson: { teachingGroup: string; year: string }[];
-  subject: string;
+  group: { level: string; year: string }[]
+  subject: string
 }
 
-const teaching: Teaching[] = [
+const teachings: Teaching[] = [
   {
     details: [
       {
-        lesson: [
+        group: [
           {
-            teachingGroup: 'L2 Économie et gestion',
+            level: 'L2 Économie et gestion',
             year: '2024-2025',
           },
         ],
         subject: 'Probabilités',
       },
       {
-        lesson: [
+        group: [
           {
-            teachingGroup: 'L1 Économie et gestion',
+            level: 'L1 Économie et gestion',
             year: '2024-2025',
           },
         ],
         subject: 'Statistiques descriptives',
       },
       {
-        lesson: [
+        group: [
           {
-            teachingGroup: 'L1 Maths-Info',
+            level: 'L1 Maths-Info',
             year: '2023-2024',
           },
           {
-            teachingGroup: 'L1 Maths-Info',
+            level: 'L1 Maths-Info',
             year: '2022-2023',
           },
         ],
         subject: 'Suites et fonctions',
       },
       {
-        lesson: [
+        group: [
           {
-            teachingGroup: 'L1 Maths-Info',
+            level: 'L1 Maths-Info',
             year: '2023-2024',
           },
           {
-            teachingGroup: 'L1 MIASHS',
+            level: 'L1 MIASHS',
             year: '2022-2023',
           },
         ],
@@ -65,41 +65,34 @@ const teaching: Teaching[] = [
   {
     details: [
       {
-        lesson: [
+        group: [
           {
-            teachingGroup: 'TD de Modalité renforcée - 1ère année',
+            level: 'TD de Modalité renforcée - 1ère année',
             year: '2019-2020',
           },
         ],
-        subject:
-          'Convergence Intégration Probabilités, Équation aux Dérivées Partielles',
+        subject: 'Convergence Intégration Probabilités, Équation aux Dérivées Partielles',
       },
     ],
     university: 'CentraleSupélec',
   },
-];
+]
 
-export default function Teaching() {
-  return teaching.map(({ details, university }, index) => (
-    <div
-      className="flex w-full flex-col items-center text-center"
-      key={university}
-    >
+export default function Teachings() {
+  return teachings.map(({ details, university }, index) => (
+    <div className="flex w-full flex-col items-center text-center" key={university}>
       {index !== 0 && <Separator className="my-4 max-w-3xs" />}
       <h3>{university}</h3>
       <div className="mt-4 flex w-full flex-col items-center">
-        {details.map(({ lesson, subject }, detailIndex) => (
+        {details.map(({ group, subject }, detailIndex) => (
           <Fragment key={subject}>
             {detailIndex !== 0 && <Separator className="my-4 max-w-10" />}
             <div className="font-semibold">{subject}</div>
             <div className="flex flex-col">
-              {lesson.map(({ teachingGroup, year }) => (
-                <div
-                  className="flex justify-center"
-                  key={`${teachingGroup}-${year}`}
-                >
+              {group.map(({ level, year }) => (
+                <div className="flex justify-center" key={`${level}-${year}`}>
                   <div>
-                    {year} - <span className="subtext">{teachingGroup}</span>
+                    {year} - <span className="subtext">{level}</span>
                   </div>
                 </div>
               ))}
@@ -108,5 +101,5 @@ export default function Teaching() {
         ))}
       </div>
     </div>
-  ));
+  ))
 }

@@ -1,11 +1,11 @@
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@/components/ui/separator'
 
-import Link from '../ui/link';
+import Link from '../ui/link'
 
 interface Talk {
-  dateAndPlace: string;
-  label: string;
-  link: string;
+  dateAndPlace: string
+  label: string
+  link: string
 }
 
 const talks: Talk[] = [
@@ -49,19 +49,16 @@ const talks: Talk[] = [
     label: 'Groupe de Travail Méthodes Stochastiques et Finance du CERMICS',
     link: 'http://cermics.enpc.fr/~alfonsi/GTMSF2223.html',
   },
-];
+]
 
 export default function Talks() {
   return talks.map((talk, index) => (
-    <div
-      className="flex w-full flex-col items-center text-center"
-      key={talk.label}
-    >
+    <div className="flex w-full flex-col items-center text-center" key={talk.label}>
       {index !== 0 && <Separator className="my-4 max-w-3xs" />}
       <div>
         <Link href={talk.link}>{talk.label}</Link>
         &#32;-&#32;{talk.dateAndPlace}
       </div>
     </div>
-  ));
+  ))
 }

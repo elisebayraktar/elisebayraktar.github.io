@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "react-perf", "jsx-a11y"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "error"
+  },
+  "env": {
+    "builtin": true,
+    "browser": true,
+    "commonjs": true,
+    "shared-node-browser": true
+  },
+  "rules": {
+    "jsx-curly-brace-presence": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-in-jsx-scope": "off"
+  },
+  "ignorePatterns": ["dist/**/*"]
+}

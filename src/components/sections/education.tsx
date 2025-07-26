@@ -1,7 +1,7 @@
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card'
 
-import Cambridge from '../icons/cambridge';
-import CentraleSupelec from '../icons/centrale-suplec';
+import Cambridge from '../icons/cambridge'
+import CentraleSupelec from '../icons/centrale-suplec'
 
 export default function Educations() {
   return (
@@ -27,5 +27,5 @@ export default function Educations() {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
