@@ -1,21 +1,97 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript", "react", "unicorn", "react-perf", "jsx-a11y"],
+  "plugins": ["typescript", "react", "unicorn"],
   "categories": {
     "correctness": "error",
     "suspicious": "error",
-    "perf": "error"
+    "perf": "error",
+    "pedantic": "error",
+    "style": "error"
   },
   "env": {
     "builtin": true,
     "browser": true,
     "commonjs": true,
+    "node": true,
     "shared-node-browser": true
   },
+  "ignorePatterns": [
+    "**/*.js",
+    "**/dist/**",
+    "**/routeTree.gen.ts",
+    "**/build/**",
+    "**/.adonisjs/api.ts",
+    "**/.adonisjs/prisma.ts",
+    "**/.prisma/client/**",
+    "**/*.d.ts"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.{mjs,cjs}", "**/*.config.ts"],
+      "rules": {
+        "typescript/no-require-imports": "off"
+      }
+    }
+  ],
   "rules": {
+    "no-children-prop": "off",
+
+    // restrictions
+    "default-case": "error",
+    "no-empty": "error",
+    "no-empty-function": "error",
+    "no-console": "error",
+    "no-unused-vars": "error",
+    "no-unused-expressions": "error",
+    "no-explicit-any": "error",
+    "no-non-null-assertion": "error",
+    "no-array-for-each": "error",
+    "prefer-modern-math-apis": "error",
+    "prefer-number-properties": "error",
+
+    //suspicious
+    "react-in-jsx-scope": "off",
+    "no-unneeded-ternary": "off",
+    "style-prop-object": "off",
+
+    // pedantic
+    "max-lines": "off",
+    "max-lines-per-function": "off",
+    "max-classes-per-file": "off",
+    "radix": "off",
+    "no-useless-undefined": "off",
+    "id-length": "off",
+    "explicit-length-check": "off",
+
+    //style
+    "prefer-template": "error",
     "jsx-curly-brace-presence": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-in-jsx-scope": "off"
-  },
-  "ignorePatterns": ["dist/**/*"]
+    "filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true,
+          "snakeCase": true
+        },
+        "ignore": "\\[.+\\]\\.tsx"
+      }
+    ],
+    "prefer-default-export": "off",
+    "no-magic-numbers": "off",
+    "sort-imports": "off",
+    "sort-keys": "off",
+    "no-ternary": "off",
+    "no-duplicate-imports": "off",
+    "jsx-handler-names": "off",
+
+    // type-aware
+    "only-throw-error": "off",
+    "no-misused-promises": "off",
+    "no-confusing-void-expression": "off",
+    "unbound-method": "off",
+    "no-unsafe-type-assertion": "off",
+    "no-unsafe-assignment": "off",
+    "no-unsafe-member-access": "off",
+    "no-unsafe-return": "off"
+  }
 }

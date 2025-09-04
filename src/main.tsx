@@ -9,7 +9,7 @@ import '@fontsource-variable/ibm-plex-sans'
 
 import App from './app'
 
-const rootElement = document.getElementById('root')
+const rootElement = document.querySelector('#root')
 
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
