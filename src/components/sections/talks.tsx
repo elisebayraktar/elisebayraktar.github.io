@@ -10,6 +10,16 @@ interface Talk {
 
 const talks: Talk[] = [
   {
+    dateAndPlace: 'Le Mans Université (June 5 2025)',
+    label: 'Dynstoch 2025',
+    link: 'https://dynstoch2025.mathnum.inrae.fr/',
+  },
+  {
+    dateAndPlace: "King's College London (December 15 2024)",
+    label: 'CFE-CMStatistics 2024',
+    link: 'https://www.cmstatistics.org/CFECMStatistics2024/',
+  },
+  {
     dateAndPlace: 'Université Gustave Eiffel (July 4 2024)',
     label: 'Séminaire de probabilités et statistiques du LAMA',
     link: 'https://lama-umr8050.fr/evenements/seminaire_de_probabilites_et_statistiques/estimation_of_a_alpha_stable_cox_ingersoll',
@@ -21,7 +31,7 @@ const talks: Talk[] = [
   },
   {
     dateAndPlace: 'ISFA (April 5 2024)',
-    label: 'Séminaire du laboration SAF ',
+    label: 'Séminaire du laboratoire SAF ',
     link: 'https://isfa.univ-lyon1.fr/recherche/actualites-du-laboratoire/seminaire-labo-elise-bayraktar-equipe-probabilites-et-statistiques-lama-universite-gustave-eiffel',
   },
   {

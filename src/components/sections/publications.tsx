@@ -13,13 +13,22 @@ interface Publication {
 
 const publications: Publication[] = [
   {
+    halId: 'hal-05239430',
+    coAuthor: {
+      name: 'Emmanuelle Clément',
+      link: 'https://perso.math.u-pem.fr/clement.emmanuelle/',
+    },
+    label: 'Efficient estimation of jump parameters for stochastic differential equations driven by Lévy processes',
+    status: 'preprint',
+  },
+  {
     halId: 'hal-04662856',
     coAuthor: {
       name: 'Emmanuelle Clément',
       link: 'https://perso.math.u-pem.fr/clement.emmanuelle/',
     },
     label: 'Volatility and jump activity estimation in a stable Cox-Ingersoll-Ross model',
-    status: 'preprint',
+    status: 'accepted in Bernoulli',
   },
   {
     halId: 'hal-04458194v2',
@@ -33,7 +42,7 @@ const publications: Publication[] = [
       link: 'https://perso.math.u-pem.fr/clement.emmanuelle/',
     },
     label: 'Estimation of a pure-jump stable Cox-Ingersoll-Ross process',
-    status: 'Bernoulli in press',
+    status: 'Bernoulli',
   },
 ]
 

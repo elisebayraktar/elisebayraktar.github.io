@@ -18,6 +18,20 @@ const teachings: Teaching[] = [
       {
         group: [
           {
+            level: 'L3',
+            year: '2025-2026',
+          },
+        ],
+        subject: 'Probabilité',
+      },
+    ],
+    university: 'Sorbonne Université',
+  },
+  {
+    details: [
+      {
+        group: [
+          {
             level: 'L2 Économie et gestion',
             year: '2024-2025',
           },
