@@ -6,7 +6,7 @@ const App = () => (
   <div className="flex flex-col items-center px-4">
     <header className="container sticky top-4 z-50 flex w-full items-center justify-between rounded-lg bg-primary/60 px-4 text-primary-foreground/95 backdrop-blur">
       <nav className="flex h-16 items-center gap-2 md:gap-4">
-        <img alt="logo of the university" className="h-10" src="images/lama.webp" />
+        <img alt="logo of the university" className="h-10" src="images/lpsm.png" />
         {sections.map(({ Icon, slug, title }) => (
           <Button asChild className="hidden md:flex" key={slug} variant="ghost">
             <a href={`#${slug}`}>
