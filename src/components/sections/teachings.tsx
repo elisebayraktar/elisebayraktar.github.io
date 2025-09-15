@@ -22,7 +22,7 @@ const teachings: Teaching[] = [
             year: '2025-2026',
           },
         ],
-        subject: 'Probabilité',
+        subject: 'Probabilités 2',
       },
     ],
     university: 'Sorbonne Université',
