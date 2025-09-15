@@ -15,6 +15,11 @@ const talks: Talk[] = [
     link: 'https://dynstoch2025.mathnum.inrae.fr/',
   },
   {
+    dateAndPlace: "Ecole des Ponts (May 13 2025)",
+    label: 'Groupe de Travail Méthodes Stochastiques et Finance du CERMICS',
+    link: 'https://cermics.enpc.fr/~alfonsi/GTMSF.html',
+  },
+  {
     dateAndPlace: "King's College London (December 15 2024)",
     label: 'CFE-CMStatistics 2024',
     link: 'https://www.cmstatistics.org/CFECMStatistics2024/',
