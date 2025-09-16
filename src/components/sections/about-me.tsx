@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 
 export default function AboutMe() {
   return (
-    <div className="container flex flex-col items-center md:flex-row md:justify-between md:px-20">
+    <div className="flex flex-col items-center md:flex-row md:justify-between">
       <div className="flex flex-col space-y-4 md:space-y-8 lg:w-3/4 lg:pr-8">
         <h1>Elise Bayraktar</h1>
         <div>

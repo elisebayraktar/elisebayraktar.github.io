@@ -5,8 +5,6 @@ import { ThemeProvider } from '@/components/theme-provider'
 
 import './index.css'
 
-import '@fontsource-variable/ibm-plex-sans'
-
 import App from './app'
 
 const rootElement = document.querySelector('#root')

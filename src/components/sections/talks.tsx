@@ -1,6 +1,4 @@
-import { Separator } from '@/components/ui/separator'
-
-import Link from '../ui/link'
+import { Button } from '@/components/ui/button'
 
 interface Talk {
   dateAndPlace: string
@@ -15,7 +13,7 @@ const talks: Talk[] = [
     link: 'https://dynstoch2025.mathnum.inrae.fr/',
   },
   {
-    dateAndPlace: "Ecole des Ponts (May 13 2025)",
+    dateAndPlace: 'Ecole des Ponts (May 13 2025)',
     label: 'Groupe de Travail Méthodes Stochastiques et Finance du CERMICS',
     link: 'https://cermics.enpc.fr/~alfonsi/GTMSF.html',
   },
@@ -67,13 +65,14 @@ const talks: Talk[] = [
 ]
 
 export default function Talks() {
-  return talks.map((talk, index) => (
-    <div className="flex w-full flex-col items-center text-center" key={talk.label}>
-      {index !== 0 && <Separator className="my-4 max-w-3xs" />}
-      <div>
-        <Link href={talk.link}>{talk.label}</Link>
+  return talks.map((talk) => (
+    <ul className="flex w-full flex-col list-disc list-inside" key={talk.label}>
+      <li>
+        <Button asChild variant="link" size="none">
+          <a href={talk.link}>{talk.label}</a>
+        </Button>
         &#32;-&#32;{talk.dateAndPlace}
-      </div>
-    </div>
+      </li>
+    </ul>
   ))
 }

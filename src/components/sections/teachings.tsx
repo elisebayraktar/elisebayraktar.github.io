@@ -1,7 +1,3 @@
-import { Fragment } from 'react/jsx-runtime'
-
-import { Separator } from '@/components/ui/separator'
-
 interface Teaching {
   details: TeachingDetails[]
   university: string
@@ -93,27 +89,27 @@ const teachings: Teaching[] = [
 ]
 
 export default function Teachings() {
-  return teachings.map(({ details, university }, index) => (
-    <div className="flex w-full flex-col items-center text-center" key={university}>
-      {index !== 0 && <Separator className="my-4 max-w-3xs" />}
-      <h3>{university}</h3>
-      <div className="mt-4 flex w-full flex-col items-center">
-        {details.map(({ group, subject }, detailIndex) => (
-          <Fragment key={subject}>
-            {detailIndex !== 0 && <Separator className="my-4 max-w-10" />}
-            <div className="font-semibold">{subject}</div>
-            <div className="flex flex-col">
-              {group.map(({ level, year }) => (
-                <div className="flex justify-center" key={`${level}-${year}`}>
-                  <div>
-                    {year} - <span className="subtext">{level}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Fragment>
-        ))}
-      </div>
+  return (
+    <div className="flex w-full md:flex-row flex-col gap-8">
+      {teachings.map(({ details, university }) => (
+        <div className="flex flex-1 flex-col" key={university}>
+          <h3>{university}</h3>
+          <div className="mt-4 flex w-full flex-col gap-2">
+            {details.map(({ group, subject }) => (
+              <div key={subject}>
+                <div className="font-semibold">{subject}</div>
+                <ul className="flex flex-col list-disc list-inside">
+                  {group.map(({ level, year }) => (
+                    <li key={`${level}-${year}`}>
+                      <b>{year}</b> - <span className="subtext">{level}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
-  ))
+  )
 }

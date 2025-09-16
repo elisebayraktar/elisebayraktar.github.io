@@ -1,8 +1,4 @@
-import { Fragment } from 'react/jsx-runtime'
-
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
 
 interface Publication {
   halId: string
@@ -18,7 +14,8 @@ const publications: Publication[] = [
       name: 'Emmanuelle Clément',
       link: 'https://perso.math.u-pem.fr/clement.emmanuelle/',
     },
-    label: 'Efficient estimation of jump parameters for stochastic differential equations driven by Lévy processes',
+    label:
+      'Efficient estimation of jump parameters for stochastic differential equations driven by Lévy processes',
     status: 'preprint',
   },
   {
@@ -48,29 +45,24 @@ const publications: Publication[] = [
 
 export default function Publications() {
   return (
-    <Card className="flex flex-col">
-      <CardContent className="flex flex-col items-center text-center">
-        {publications.map(({ halId, coAuthor, label, status: additionalInfos }, index) => (
-          <Fragment key={halId}>
-            {index !== 0 && <Separator className="my-4 max-w-1/3" />}
-            <div>
+    <ul className="list-disc list-inside">
+      {publications.map(({ halId, coAuthor, label, status: additionalInfos }) => (
+        <li key={halId}>
+          <Button asChild size="none" variant="link">
+            <a href={`https://hal.science/${halId}`}>{label}</a>
+          </Button>
+          {coAuthor && (
+            <>
+              &#32;(with&#32;
               <Button asChild size="none" variant="link">
-                <a href={`https://hal.science/${halId}`}>{label}</a>
+                <a href={coAuthor.link}>{coAuthor.name}</a>
               </Button>
-              {coAuthor && (
-                <>
-                  &#32;(with&#32;
-                  <Button asChild size="none" variant="link">
-                    <a href={coAuthor.link}>{coAuthor.name}</a>
-                  </Button>
-                  )
-                </>
-              )}
-              &#32;({additionalInfos})
-            </div>
-          </Fragment>
-        ))}
-      </CardContent>
-    </Card>
+              )
+            </>
+          )}
+          &#32;({additionalInfos})
+        </li>
+      ))}
+    </ul>
   )
 }

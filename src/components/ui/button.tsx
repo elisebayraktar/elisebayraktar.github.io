@@ -19,8 +19,8 @@ const buttonVariants = cva(
       },
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        ghost: 'hover:bg-primary/60 hover:text-primary-foreground/95 dark:hover:bg-primary/50',
-        link: 'text-base text-primary underline-offset-4 hover:underline',
+        ghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
+        link: 'text-base underline-offset-4 hover:underline font-semibold',
         outline:
           'bg-transparent hover:border hover:border-primary/50 hover:bg-primary/30 hover:text-primary-foreground dark:hover:bg-input/50',
       },
