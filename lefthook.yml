@@ -1,11 +1,13 @@
 commit-msg:
-  commands:
-    lint-commit-msg:
-      run: npx --no -- commitlint --edit
+  jobs:
+    - run: npx --no -- commitlint --edit
+      name: Commit Lint
+
 pre-commit:
   parallel: true
   jobs:
     - run: pnpm dlx oxlint {staged_files} --fix
+      name: Lint
       glob:
         - '*.js'
         - '*.jsx'
@@ -16,6 +18,7 @@ pre-commit:
         - '*.css'
       stage_fixed: true
     - run: pnpm dlx prettier --write {staged_files}
+      name: Format
       glob:
         - '*.js'
         - '*.jsx'
