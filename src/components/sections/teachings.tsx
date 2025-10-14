@@ -98,7 +98,7 @@ export default function Teachings() {
             {details.map(({ group, subject }) => (
               <div key={subject}>
                 <div className="font-semibold">{subject}</div>
-                <ul className="flex flex-col list-disc list-inside">
+                <ul className="flex flex-col list-disc ml-4">
                   {group.map(({ level, year }) => (
                     <li key={`${level}-${year}`}>
                       <b>{year}</b> - <span className="subtext">{level}</span>

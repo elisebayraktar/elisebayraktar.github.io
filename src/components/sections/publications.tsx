@@ -45,7 +45,7 @@ const publications: Publication[] = [
 
 export default function Publications() {
   return (
-    <ul className="list-disc list-inside">
+    <ul className="list-disc ml-4">
       {publications.map(({ halId, coAuthor, label, status: additionalInfos }) => (
         <li key={halId}>
           <Button asChild size="none" variant="link">
