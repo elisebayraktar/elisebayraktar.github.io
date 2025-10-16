@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Link } from '../ui/link'
 
 interface Talk {
   dateAndPlace: string
@@ -66,11 +66,9 @@ const talks: Talk[] = [
 
 export default function Talks() {
   return talks.map((talk) => (
-    <ul className="flex w-full flex-col list-disc ml-4" key={talk.label}>
+    <ul className="flex w-full flex-col list-disc ml-4" key={talk.link}>
       <li>
-        <Button asChild variant="link" size="none">
-          <a href={talk.link}>{talk.label}</a>
-        </Button>
+        <Link href={talk.link}>{talk.label}</Link>
         &#32;-&#32;{talk.dateAndPlace}
       </li>
     </ul>

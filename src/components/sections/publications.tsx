@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Link } from '../ui/link'
 
 interface Publication {
   halId: string
@@ -48,16 +48,11 @@ export default function Publications() {
     <ul className="list-disc ml-4">
       {publications.map(({ halId, coAuthor, label, status: additionalInfos }) => (
         <li key={halId}>
-          <Button asChild size="none" variant="link">
-            <a href={`https://hal.science/${halId}`}>{label}</a>
-          </Button>
+          <Link href={`https://hal.science/${halId}`}>{label}</Link>
           {coAuthor && (
             <>
               &#32;(with&#32;
-              <Button asChild size="none" variant="link">
-                <a href={coAuthor.link}>{coAuthor.name}</a>
-              </Button>
-              )
+              <Link href={coAuthor.link}>{coAuthor.name}</Link>)
             </>
           )}
           &#32;({additionalInfos})

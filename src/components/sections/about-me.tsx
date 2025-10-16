@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Link } from '../ui/link'
 
 export default function AboutMe() {
   return (
@@ -9,10 +9,7 @@ export default function AboutMe() {
           I am a 3rd year PhD student at LAMA (Université Gustave Eiffel) under the supervision of
           Emmanuelle Clément, on the subject &quot;Estimation and approximation of SDEs directed by
           non-symmetric Lévy processes&quot;. My PhD is financed by ANR-21-CE40-0021&#32;
-          <Button asChild size="none" variant="link">
-            <a href="https://effi-stats.fr/">EFFI</a>
-          </Button>
-          .
+          <Link href="https://effi-stats.fr/">EFFI</Link>.
         </div>
         <div>PhD students&apos; representative at the doctoral school MSTIC</div>
       </div>

@@ -10,12 +10,17 @@ const App = () => (
       <nav className="flex h-16 items-center gap-2 md:gap-4">
         <img alt="logo of the university" className="h-10" src="images/lpsm.png" />
         {sections.map(({ Icon, slug, title }) => (
-          <Button asChild className="hidden md:flex" key={slug} variant="ghost">
-            <a href={`#${slug}`}>
-              <Icon />
-              {title}
-            </a>
-          </Button>
+          <Button
+            render={
+              <a href={`#${slug}`}>
+                <Icon />
+                {title}
+              </a>
+            }
+            className="hidden md:flex"
+            key={slug}
+            variant="ghost"
+          />
         ))}
       </nav>
       <ThemeToggle />
