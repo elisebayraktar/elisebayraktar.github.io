@@ -1,17 +1,17 @@
-import { Link } from '../ui/link'
-
 export default function AboutMe() {
   return (
     <div className="flex flex-col items-center md:flex-row md:justify-between">
       <div className="flex flex-col space-y-4 md:space-y-8 lg:w-3/4 lg:pr-8">
         <h1>Elise Bayraktar</h1>
-        <div>
-          I am a 3rd year PhD student at LAMA (Université Gustave Eiffel) under the supervision of
-          Emmanuelle Clément, on the subject &quot;Estimation and approximation of SDEs directed by
-          non-symmetric Lévy processes&quot;. My PhD is financed by ANR-21-CE40-0021&#32;
-          <Link href="https://effi-stats.fr/">EFFI</Link>.
-        </div>
-        <div>PhD students&apos; representative at the doctoral school MSTIC</div>
+        <p>
+          I am currently a postdoctoral researcher at Sorbonne Université, working with Charlotte
+          Dion-Blanc.
+        </p>
+        <p>
+          I previously did my PhD at Université Gustave Eiffel under the supervision of Emmanuelle
+          Clément on the &#34;High-frequency estimation of the stable CIR model&#34;, which I
+          defended in July 2025.
+        </p>
       </div>
       <img
         alt="Elise Bayraktar"
