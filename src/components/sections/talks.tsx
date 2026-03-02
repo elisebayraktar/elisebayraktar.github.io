@@ -8,8 +8,8 @@ interface Talk {
 
 const talks: Talk[] = [
   {
-    dateAndPlace: 'INRIA PASTA (March 23 2026)',
-    label: 'Séminaire PASTA',
+    dateAndPlace: "Centre Inria de l'Université de Lorraine (March 23 2026)",
+    label: "Séminaire de l'équipe Inria PASTA",
     link: 'https://team.inria.fr/pasta/fr/francais-efficient-estimation-of-jump-parameters-for-stochastic-differential-equations-driven-by-levy-processes-elise-bayraktar-sorbonne-universite/',
   },
   {
