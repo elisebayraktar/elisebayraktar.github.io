@@ -1,11 +1,4 @@
-import {
-  BookIcon,
-  GraduationCapIcon,
-  type LucideIcon,
-  PencilIcon,
-  PresentationIcon,
-  UserIcon,
-} from 'lucide-react'
+import { BookIcon, GraduationCapIcon, type LucideIcon, PencilIcon, PresentationIcon, UserIcon } from 'lucide-react'
 
 import AboutMe from '@/components/sections/about-me'
 import Educations from '@/components/sections/education'

@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from '@/components/theme-provider'
 
 import './index.css'
-
 import App from './app'
 
 const rootElement = document.querySelector('#root')

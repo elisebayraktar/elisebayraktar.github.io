@@ -3,9 +3,9 @@ import CentraleSupelec from '../icons/centrale-suplec'
 
 export default function Educations() {
   return (
-    <div className="w-full flex md:flex-row justify-center gap-8 flex-col">
+    <div className="flex w-full flex-col justify-center gap-8 md:flex-row">
       <div className="flex items-center space-x-7">
-        <Cambridge className="w-20 fill-base-content" />
+        <Cambridge className="fill-base-content w-20" />
         <div className="flex w-9/10 flex-col">
           <h3>University of Cambridge</h3>
           <div>Master of Advanced Study in Mathematics - Part III</div>

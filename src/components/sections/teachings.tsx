@@ -90,7 +90,7 @@ const teachings: Teaching[] = [
 
 export default function Teachings() {
   return (
-    <div className="flex w-full md:flex-row flex-col gap-8">
+    <div className="flex w-full flex-col gap-8 md:flex-row">
       {teachings.map(({ details, university }) => (
         <div className="flex flex-1 flex-col" key={university}>
           <h3>{university}</h3>
@@ -98,7 +98,7 @@ export default function Teachings() {
             {details.map(({ group, subject }) => (
               <div key={subject}>
                 <div className="font-semibold">{subject}</div>
-                <ul className="flex flex-col list-disc ml-4">
+                <ul className="ml-4 flex list-disc flex-col">
                   {group.map(({ level, year }) => (
                     <li key={`${level}-${year}`}>
                       <b>{year}</b> - <span className="subtext">{level}</span>

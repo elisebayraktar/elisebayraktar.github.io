@@ -86,11 +86,11 @@
 
 @layer base {
   h1 {
-    @apply text-primary font-sans text-5xl font-extrabold uppercase md:text-6xl;
+    @apply font-sans text-5xl font-extrabold text-primary uppercase md:text-6xl;
   }
 
   h2 {
-    @apply text-primary mb-4 w-fit text-3xl font-semibold capitalize;
+    @apply mb-4 w-fit text-3xl font-semibold text-primary capitalize;
   }
 
   h3 {
@@ -100,7 +100,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 scroll-smooth;
+    @apply scroll-smooth border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;

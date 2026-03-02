@@ -66,7 +66,7 @@ const talks: Talk[] = [
 
 export default function Talks() {
   return talks.map((talk) => (
-    <ul className="flex w-full flex-col list-disc ml-4" key={talk.link}>
+    <ul className="ml-4 flex w-full list-disc flex-col" key={talk.link}>
       <li>
         <Link href={talk.link}>{talk.label}</Link>
         &#32;-&#32;{talk.dateAndPlace}

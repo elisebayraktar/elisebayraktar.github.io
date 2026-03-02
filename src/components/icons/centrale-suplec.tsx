@@ -2,12 +2,7 @@ import { cn } from '@/lib/utils'
 
 export default function CentraleSupelec({ className = '' }: Readonly<{ className?: string }>) {
   return (
-    <svg
-      aria-labelledby="title"
-      className={cn('dark:fill-white', className)}
-      viewBox="0 0 700 363"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg aria-labelledby="title" className={cn('dark:fill-white', className)} viewBox="0 0 700 363" xmlns="http://www.w3.org/2000/svg">
       <title id="title">CentraleSupelec Logo</title>
       <g fill="#b00739">
         <path d="M407.392 154.69c-5.363-11.368-19.453-15.881-31.49-10.061-12.03 5.802-20.748 21.32-15.376 32.689 5.353 11.37 22.753 14.284 34.772 8.474 12.029-5.811 17.438-19.722 12.094-31.101" />

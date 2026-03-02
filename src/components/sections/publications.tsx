@@ -14,8 +14,7 @@ const publications: Publication[] = [
       name: 'Emmanuelle Clément',
       link: 'https://perso.math.u-pem.fr/clement.emmanuelle/',
     },
-    label:
-      'Efficient estimation of jump parameters for stochastic differential equations driven by Lévy processes',
+    label: 'Efficient estimation of jump parameters for stochastic differential equations driven by Lévy processes',
     status: 'preprint',
   },
   {
@@ -45,7 +44,7 @@ const publications: Publication[] = [
 
 export default function Publications() {
   return (
-    <ul className="list-disc ml-4">
+    <ul className="ml-4 list-disc">
       {publications.map(({ halId, coAuthor, label, status: additionalInfos }) => (
         <li key={halId}>
           <Link href={`https://hal.science/${halId}`}>{label}</Link>
