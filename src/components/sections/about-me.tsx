@@ -7,9 +7,8 @@ export default function AboutMe() {
         <h1>Elise Bayraktar</h1>
         <p>I am currently a postdoctoral researcher at Sorbonne Université, working with Charlotte Dion-Blanc.</p>
         <p>
-          I previously did my PhD at Université Gustave Eiffel under the supervision of Emmanuelle Clément on the{' '}
-          <Link href="https://theses.hal.science/tel-05517419">High-frequency estimation of the stable CIR model</Link>, which I defended in July
-          2025.
+          I previously did my PhD at Université Gustave Eiffel under the supervision of Emmanuelle Clément on the &#34;High-frequency estimation of
+          the stable CIR model&#34; [<Link href="https://theses.hal.science/tel-05517419">Hal</Link>], which I defended in July 2025.
         </p>
       </div>
       <img
