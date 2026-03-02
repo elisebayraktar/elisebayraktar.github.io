@@ -11,6 +11,12 @@ const defaultAuthors = ['E. Bayraktar']
 
 const publications: Publication[] = [
   {
+    halId: 'hal-05533274',
+    yearAndJournal: 'Submitted for publication, 2026',
+    authors: [...defaultAuthors, 'C. Dion-Blanc'],
+    label: 'Sparse recovery of Diffusion Dynamics: Handling High-Dimensionality in Repeated Short Trajectories',
+  },
+  {
     halId: 'hal-05239430',
     yearAndJournal: 'Submitted for publication, 2026',
     authors: [...defaultAuthors, 'E. Clément'],
@@ -41,7 +47,7 @@ export default function Publications() {
     <ul className="ml-4 list-disc">
       {publications.map(({ halId, authors, label, yearAndJournal }) => (
         <li key={halId}>
-          <Link href={`https://hal.science/${halId}`}>{label}</Link>.{yearAndJournal}.{authors.join(' and ')}.
+          <Link href={`https://hal.science/${halId}`}>{label}</Link>. {yearAndJournal}. {authors.join(' and ')}.
         </li>
       ))}
     </ul>
