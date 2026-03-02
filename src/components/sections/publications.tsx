@@ -47,7 +47,7 @@ export default function Publications() {
     <ul className="ml-4 list-disc">
       {publications.map(({ halId, authors, label, yearAndJournal }) => (
         <li key={halId}>
-          <Link href={`https://hal.science/${halId}`}>{label}</Link>. {yearAndJournal}. {authors.join(' and ')}.
+          <Link href={`https://hal.science/${halId}`}>{label}.</Link> {yearAndJournal}. {authors.join(' and ')}.
         </li>
       ))}
     </ul>
