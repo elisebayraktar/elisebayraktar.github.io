@@ -8,6 +8,16 @@ interface Talk {
 
 const talks: Talk[] = [
   {
+    dateAndPlace: 'INRIA PASTA (March 23 2026)',
+    label: 'Séminaire PASTA',
+    link: 'https://team.inria.fr/pasta/fr/francais-efficient-estimation-of-jump-parameters-for-stochastic-differential-equations-driven-by-levy-processes-elise-bayraktar-sorbonne-universite/',
+  },
+  {
+    dateAndPlace: 'Université Paris 1 (February 6 2026)',
+    label: 'Séminaire du SAMM',
+    link: 'https://samm.pantheonsorbonne.fr/seminaire-conference/seminaire-du-samm',
+  },
+  {
     dateAndPlace: 'Le Mans Université (June 5 2025)',
     label: 'Dynstoch 2025',
     link: 'https://dynstoch2025.mathnum.inrae.fr/',
@@ -61,16 +71,6 @@ const talks: Talk[] = [
     dateAndPlace: 'Ecole des Ponts (March 6 2023)',
     label: 'Groupe de Travail Méthodes Stochastiques et Finance du CERMICS',
     link: 'http://cermics.enpc.fr/~alfonsi/GTMSF2223.html',
-  },
-  {
-    dateAndPlace: 'INRIA PASTA (March 23 2026)',
-    label: 'Séminaire PASTA',
-    link: 'https://team.inria.fr/pasta/fr/francais-efficient-estimation-of-jump-parameters-for-stochastic-differential-equations-driven-by-levy-processes-elise-bayraktar-sorbonne-universite/',
-  },
-  {
-    dateAndPlace: 'Université Paris 1 (February 6 2026)',
-    label: 'Séminaire du SAMM',
-    link: 'https://samm.pantheonsorbonne.fr/seminaire-conference/seminaire-du-samm',
   },
 ]
 
