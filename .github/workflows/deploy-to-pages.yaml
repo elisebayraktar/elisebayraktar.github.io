@@ -23,15 +23,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: oven-sh/setup-bun@v2
+      - uses: voidzero-dev/setup-vp@v1
+        with:
+          node-version: '24'
+          cache: true
 
       - name: Install dependencies
-        shell: bash
-        run: bun i --frozen-lockfile
+        run: vp install --frozen-lockfile
 
-      - name: Build
-        run: bun run build
+      - name: Build project
+        run: vp build
+        env:
+          VITE_PUBLIC_URL: ${{ vars.VITE_PUBLIC_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
