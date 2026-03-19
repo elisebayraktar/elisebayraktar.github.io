@@ -10,7 +10,7 @@ export default function AboutMe() {
           I previously did my PhD at Université Gustave Eiffel under the supervision of Emmanuelle Clément on the &#34;High-frequency estimation of
           the stable CIR model&#34; [<Link href="https://theses.hal.science/tel-05517419">Hal</Link>], which I defended in July 2025. I was awarded
           the prize{' '}
-          <Link href="https://www.sfds.asso.fr/fr/prix_et_bourses/544-le_prix_marie_jeanne_laurent_duhamel/">Marie-Jeanne Laurent-Duhamel</Link>.
+          <Link href="https://www.sfds.asso.fr/fr/prix_et_bourses/544-le_prix_marie_jeanne_laurent_duhamel/">Marie-Jeanne Laurent-Duhamel</Link> 2026.
         </p>
       </div>
       <img
