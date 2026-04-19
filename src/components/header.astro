@@ -1,46 +1,42 @@
 ---
-import Book from "lucide-astro/Book";
-import GraduationCap from "lucide-astro/GraduationCap";
-import Pencil from "lucide-astro/Pencil";
-import Presentation from "lucide-astro/Presentation";
-import User from "lucide-astro/User";
+import { Book, GraduationCap, Pencil, Presentation, User } from '@lucide/astro'
 
-import ThemeToggle from "@/components/theme-toggle.astro";
-import { sections, type IconName } from "@/lib/constants";
+import ThemeToggle from '@/components/theme-toggle.astro'
+import { type IconName, sections } from '@/lib/constants'
 
 const icons: Record<IconName, typeof Book> = {
-    Book,
-    GraduationCap,
-    Pencil,
-    Presentation,
-    User,
-};
+  Book,
+  GraduationCap,
+  Pencil,
+  Presentation,
+  User,
+}
 ---
 
 <header class="sticky top-0 z-50 flex w-full items-center justify-between border-b bg-background px-4 py-2 text-foreground">
-    <nav class="flex h-16 items-center gap-2 md:gap-4">
-        <img
-            alt="LPSM - Laboratoire de Probabilités, Statistiques et Modélisation"
-            class="h-10 w-auto shrink-0"
-            decoding="async"
-            height="101"
-            src="/images/lpsm.webp"
-            width="200"
-        />
-        {
-            sections.map(({ iconName, slug, title }) => {
-                const Icon = icons[iconName];
-                return (
-                    <a
-                        href={`#${slug}`}
-                        class="hidden h-9 items-center justify-center gap-2 rounded-md px-3 font-medium whitespace-nowrap transition-all hover:bg-accent hover:text-accent-foreground md:inline-flex"
-                    >
-                        <Icon class="size-4" />
-                        {title}
-                    </a>
-                );
-            })
-        }
-    </nav>
-    <ThemeToggle />
+  <nav class="flex h-16 items-center gap-2 md:gap-4">
+    <img
+      alt="LPSM - Laboratoire de Probabilités, Statistiques et Modélisation"
+      class="h-10 w-auto shrink-0"
+      decoding="async"
+      height="101"
+      src="/images/lpsm.webp"
+      width="200"
+    />
+    {
+      sections.map(({ iconName, slug, title }) => {
+        const Icon = icons[iconName]
+        return (
+          <a
+            class="hidden h-9 items-center justify-center gap-2 rounded-md px-3 font-medium whitespace-nowrap transition-all hover:bg-accent hover:text-accent-foreground md:inline-flex"
+            href={`#${slug}`}
+          >
+            <Icon class="size-4" />
+            {title}
+          </a>
+        )
+      })
+    }
+  </nav>
+  <ThemeToggle />
 </header>

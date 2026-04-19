@@ -1,16 +1,16 @@
-export type SectionSlug = 'about-me' | 'publications' | 'talks' | 'education' | 'teaching'
-export type IconName = 'User' | 'Book' | 'Presentation' | 'GraduationCap' | 'Pencil'
-
+export type IconName = 'Book' | 'GraduationCap' | 'Pencil' | 'Presentation' | 'User'
 export interface SectionMeta {
+  iconName: IconName
   slug: SectionSlug
   title: string
-  iconName: IconName
 }
 
+export type SectionSlug = 'about-me' | 'education' | 'publications' | 'talks' | 'teaching'
+
 export const sections: SectionMeta[] = [
-  { slug: 'about-me', title: 'About me', iconName: 'User' },
-  { slug: 'publications', title: 'Publications', iconName: 'Book' },
-  { slug: 'talks', title: 'Talks', iconName: 'Presentation' },
-  { slug: 'education', title: 'Education', iconName: 'GraduationCap' },
-  { slug: 'teaching', title: 'Teaching', iconName: 'Pencil' },
+  { iconName: 'User', slug: 'about-me', title: 'About me' },
+  { iconName: 'Book', slug: 'publications', title: 'Publications' },
+  { iconName: 'Presentation', slug: 'talks', title: 'Talks' },
+  { iconName: 'GraduationCap', slug: 'education', title: 'Education' },
+  { iconName: 'Pencil', slug: 'teaching', title: 'Teaching' },
 ]
