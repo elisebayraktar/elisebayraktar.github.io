@@ -16,8 +16,11 @@ export default function AboutMe() {
       <img
         alt="Elise Bayraktar"
         className="mt-5 aspect-square w-3/4 rounded-full border-2 border-primary object-cover lg:mt-0 lg:w-1/4"
+        decoding="async"
         fetchPriority="high"
+        height="800"
         src="images/profile-picture.webp"
+        width="800"
       />
     </div>
   )

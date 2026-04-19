@@ -8,7 +8,14 @@ const App = () => (
   <div className="flex flex-col items-center">
     <header className="sticky top-0 z-50 flex w-full items-center justify-between border-b bg-background px-4 py-2 text-foreground">
       <nav className="flex h-16 items-center gap-2 md:gap-4">
-        <img alt="logo of the university" className="h-10" src="images/lpsm.png" />
+        <img
+          alt="LPSM — Laboratoire de Probabilités, Statistiques et Modélisation"
+          className="h-10"
+          decoding="async"
+          height="162"
+          src="images/lpsm.webp"
+          width="320"
+        />
         {sections.map(({ Icon, slug, title }) => (
           <Button
             render={
