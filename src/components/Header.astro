@@ -2,6 +2,7 @@
 import { ThemeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { sections } from '@/lib/constants'
+import { cn } from '@/lib/utils'
 ---
 
 <header class="sticky top-0 z-50 flex w-full items-center justify-between border-b bg-background px-4 py-2 text-foreground">
@@ -16,7 +17,7 @@ import { sections } from '@/lib/constants'
     />
     {
       sections.map(({ Icon, slug, title }) => (
-        <a href={`#${slug}`} class={`${buttonVariants({ variant: 'ghost' })} hidden md:flex`}>
+        <a href={`#${slug}`} class={cn(buttonVariants({ variant: 'ghost' }), 'hidden md:flex')}>
           <Icon />
           {title}
         </a>
