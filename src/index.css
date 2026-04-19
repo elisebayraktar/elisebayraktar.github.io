@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@import '@fontsource/raleway/latin-400.css';
+@import '@fontsource/raleway/latin-600.css';
+@import '@fontsource/raleway/latin-800.css';
 
 @custom-variant dark (&:is(.dark *));
 

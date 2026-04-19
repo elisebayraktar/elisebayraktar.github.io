@@ -19,7 +19,7 @@ export default function AboutMe() {
         decoding="async"
         fetchPriority="high"
         height="800"
-        src="images/profile-picture.webp"
+        src="/images/profile-picture.webp"
         width="800"
       />
     </div>
