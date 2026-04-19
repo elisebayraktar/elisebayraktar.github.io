@@ -1,0 +1,27 @@
+---
+import { ThemeToggle } from '@/components/theme-toggle'
+import { buttonVariants } from '@/components/ui/button'
+import { sections } from '@/lib/constants'
+---
+
+<header class="sticky top-0 z-50 flex w-full items-center justify-between border-b bg-background px-4 py-2 text-foreground">
+  <nav class="flex h-16 items-center gap-2 md:gap-4">
+    <img
+      alt="LPSM — Laboratoire de Probabilités, Statistiques et Modélisation"
+      class="h-10"
+      decoding="async"
+      height="162"
+      src="/images/lpsm.webp"
+      width="320"
+    />
+    {
+      sections.map(({ Icon, slug, title }) => (
+        <a href={`#${slug}`} class={`${buttonVariants({ variant: 'ghost' })} hidden md:flex`}>
+          <Icon />
+          {title}
+        </a>
+      ))
+    }
+  </nav>
+  <ThemeToggle client:load />
+</header>

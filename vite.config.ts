@@ -1,8 +1,5 @@
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite-plus'
 
-// https://vite.dev/config/
 export default defineConfig({
   staged: { '*': 'vp check --fix' },
   lint: {
@@ -21,24 +18,7 @@ export default defineConfig({
       node: true,
       'shared-node-browser': true,
     },
-    ignorePatterns: [
-      '**/*.js',
-      '**/dist/**',
-      '**/routeTree.gen.ts',
-      '**/build/**',
-      '**/.adonisjs/api.ts',
-      '**/.adonisjs/prisma.ts',
-      '**/.prisma/client/**',
-      '**/*.d.ts',
-    ],
-    overrides: [
-      {
-        files: ['**/use-file-upload.ts'],
-        rules: {
-          'react-hooks/exhaustive-deps': 'off',
-        },
-      },
-    ],
+    ignorePatterns: ['**/*.js', '**/*.astro', '**/dist/**', '**/build/**', '**/.astro/**', '**/*.d.ts'],
     rules: {
       // Restriction
       'default-case': 'error',
@@ -69,9 +49,7 @@ export default defineConfig({
       'filename-case': [
         'error',
         {
-          cases: {
-            kebabCase: true,
-          },
+          cases: { kebabCase: true, pascalCase: true },
           ignore: '\\[.+\\]\\.tsx',
         },
       ],
@@ -102,6 +80,4 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  base: '/',
-  plugins: [react(), tailwindcss()],
 })
