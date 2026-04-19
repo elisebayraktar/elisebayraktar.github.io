@@ -1,12 +1,7 @@
-import { Link } from '../ui/link'
+---
+import Link from '@/components/ui/link.astro'
 
-interface Talk {
-  dateAndPlace: string
-  label: string
-  link: string
-}
-
-const talks: Talk[] = [
+const talks = [
   {
     dateAndPlace: "Centre Inria de l'Université de Lorraine (March 23 2026)",
     label: "Séminaire de l'équipe Inria PASTA",
@@ -73,14 +68,14 @@ const talks: Talk[] = [
     link: 'http://cermics.enpc.fr/~alfonsi/GTMSF2223.html',
   },
 ]
+---
 
-export default function Talks() {
-  return talks.map((talk) => (
-    <ul className="ml-4 flex w-full list-disc flex-col" key={talk.link}>
+<ul class="ml-4 flex list-disc flex-col">
+  {
+    talks.map((talk) => (
       <li>
-        <Link href={talk.link}>{talk.label}</Link>
-        &#32;-&#32;{talk.dateAndPlace}
+        <Link href={talk.link}>{talk.label}</Link> - {talk.dateAndPlace}
       </li>
-    </ul>
-  ))
-}
+    ))
+  }
+</ul>

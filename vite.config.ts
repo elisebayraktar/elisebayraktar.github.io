@@ -4,7 +4,7 @@ export default defineConfig({
   staged: { '*': 'vp check --fix' },
   lint: {
     options: { typeAware: true, typeCheck: true },
-    plugins: ['typescript', 'react', 'unicorn'],
+    plugins: ['typescript', 'unicorn'],
     categories: {
       correctness: 'error',
       suspicious: 'error',
@@ -34,18 +34,14 @@ export default defineConfig({
       'prefer-number-properties': 'error',
 
       // Suspicious
-      'react-in-jsx-scope': 'off',
       'no-unneeded-ternary': 'off',
-      'style-prop-object': 'off',
       'no-unsafe-type-assertion': 'off',
-      'react/jsx-no-constructed-context-values': 'off',
 
       // Pedantic
       'no-deprecated': 'error',
 
       // Style
       'prefer-template': 'error',
-      'jsx-curly-brace-presence': 'error',
       'filename-case': [
         'error',
         {
@@ -61,8 +57,6 @@ export default defineConfig({
       'no-ternary': 'off',
       'no-duplicate-imports': 'off',
       'max-params': 'off',
-      'jsx-max-depth': 'off',
-      'jsx-props-no-spreading': 'off',
       'max-statements': 'off',
       'no-null': 'off',
     },

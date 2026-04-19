@@ -1,0 +1,94 @@
+---
+import "@/index.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="canonical" href="https://elisebayraktar.github.io/" />
+        <title>Elise Bayraktar - Probability & Statistics Researcher in Probability & Statistics</title>
+        <meta
+            name="description"
+            content="Postdoctoral researcher at Sorbonne Université (LPSM) working with Charlotte Dion-Blanc on stochastic processes and statistical estimation."
+        />
+        <meta name="google-site-verification" content="Tks34USbwbkthTI4YUeFquolMiSSuGZL_K057-TlIe8" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://elisebayraktar.github.io/" />
+        <meta property="og:title" content="Elise Bayraktar - Postdoctoral Researcher in Probability & Statistics" />
+        <meta
+            property="og:description"
+            content="Postdoctoral researcher at Sorbonne Université (LPSM) working on stochastic processes and statistical estimation."
+        />
+        <meta property="og:image" content="https://elisebayraktar.github.io/images/profile-picture.webp" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Elise Bayraktar - Postdoctoral Researcher in Probability & Statistics" />
+        <meta
+            name="twitter:description"
+            content="Postdoctoral researcher at Sorbonne Université (LPSM) working on stochastic processes and statistical estimation."
+        />
+        <meta name="twitter:image" content="https://elisebayraktar.github.io/images/profile-picture.webp" />
+
+        <script
+            type="application/ld+json"
+            is:inline
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Elise Bayraktar",
+                jobTitle: "Postdoctoral Researcher",
+                url: "https://elisebayraktar.github.io/",
+                image: "https://elisebayraktar.github.io/images/profile-picture.webp",
+                colleague: ["https://perso.math.u-pem.fr/clement.emmanuelle/"],
+                knowsAbout: [
+                    "Stochastic processes",
+                    "Statistical estimation",
+                    "Cox-Ingersoll-Ross model",
+                    "Lévy processes",
+                    "High-frequency estimation",
+                    "Probability theory",
+                ],
+                sameAs: [
+                    "https://scholar.google.com/citations?user=OttA_dQAAAAJ",
+                    "https://www.linkedin.com/in/elise-bayraktar/",
+                    "https://www.lpsm.paris/en/users/bayraktar/index",
+                    "https://pagespro.univ-gustave-eiffel.fr/elise-bayraktar",
+                    "https://lama-umr8050.fr/membres/bayraktar.elise",
+                    "https://theses.hal.science/tel-05517419",
+                ],
+                affiliation: {
+                    "@type": "Organization",
+                    name: "LPSM",
+                    alternateName: "Laboratoire de Probabilités, Statistiques et Modélisation",
+                    url: "https://www.lpsm.paris/",
+                    logo: "https://elisebayraktar.github.io/images/lpsm.webp",
+                    parentOrganization: {
+                        "@type": "CollegeOrUniversity",
+                        name: "Sorbonne Université",
+                        url: "https://www.sorbonne-universite.fr/",
+                    },
+                },
+                alumniOf: [
+                    { "@type": "CollegeOrUniversity", name: "University of Cambridge", url: "https://www.cam.ac.uk/" },
+                    { "@type": "CollegeOrUniversity", name: "CentraleSupélec", url: "https://www.centralesupelec.fr/" },
+                    { "@type": "CollegeOrUniversity", name: "Université Gustave Eiffel", url: "https://www.univ-gustave-eiffel.fr/" },
+                ],
+                award: "Marie-Jeanne Laurent-Duhamel prize 2026",
+            })}
+        />
+
+        <script is:inline>
+            (() => {
+                const stored = localStorage.getItem("vite-ui-theme");
+                const theme = stored ?? "system";
+                const resolved = theme === "system" ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : theme;
+                document.documentElement.classList.add(resolved);
+            })();
+        </script>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
