@@ -101,7 +101,7 @@ export default function Teachings() {
                 <ul className="ml-4 flex list-disc flex-col">
                   {group.map(({ level, year }) => (
                     <li key={`${level}-${year}`}>
-                      <b>{year}</b> - <span className="subtext">{level}</span>
+                      <b>{year}</b> - <span className="text-sm text-muted-foreground">{level}</span>
                     </li>
                   ))}
                 </ul>
