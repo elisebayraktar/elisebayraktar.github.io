@@ -13,12 +13,12 @@
     "prepare": "lefthook install"
   },
   "dependencies": {
-    "astro": "7.0.0"
+    "astro": "7.0.7"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "lefthook": "2.1.9",
-    "prettier": "3.8.4",
+    "lefthook": "2.1.10",
+    "prettier": "3.9.5",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "6.0.3"
   },
