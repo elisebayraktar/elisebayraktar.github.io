@@ -1,13 +1,19 @@
 ---
-import { cn } from '@/lib/utils'
-
-interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
-  class?: string
-}
-
-const { class: className, ...rest } = Astro.props
+type Props = astroHTML.JSX.AnchorHTMLAttributes
 ---
 
-<a class={cn('text-primary rounded-sm underline-offset-4 outline-none hover:underline', className)} {...rest}>
+<a {...Astro.props}>
   <slot />
 </a>
+
+<style>
+  a {
+    color: var(--primary);
+    border-radius: 0.125rem;
+    text-underline-offset: 4px;
+    outline: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

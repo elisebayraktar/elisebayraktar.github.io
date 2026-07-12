@@ -37,7 +37,7 @@ const publications = [
 ]
 ---
 
-<ul class="ml-4 list-disc">
+<ul>
   {
     publications.map(({ authors, halId, label, yearAndJournal }) => (
       <li>
@@ -46,3 +46,10 @@ const publications = [
     ))
   }
 </ul>
+
+<style>
+  ul {
+    margin-left: 1rem;
+    list-style: disc;
+  }
+</style>

@@ -48,19 +48,19 @@ const teachings = [
 ]
 ---
 
-<div class="flex w-full flex-col gap-8 md:flex-row">
+<div class="teachings">
   {
     teachings.map(({ details, university }) => (
-      <div class="flex flex-1 flex-col">
+      <div class="university">
         <h3>{university}</h3>
-        <div class="mt-4 flex w-full flex-col gap-2">
+        <div class="subjects">
           {details.map(({ group, subject }) => (
             <div>
-              <div class="font-semibold">{subject}</div>
-              <ul class="ml-4 flex list-disc flex-col">
+              <div class="subject">{subject}</div>
+              <ul>
                 {group.map(({ level, year }) => (
                   <li>
-                    <b>{year}</b> - <span class="text-sm text-muted-foreground">{level}</span>
+                    <b>{year}</b> - <span class="level">{level}</span>
                   </li>
                 ))}
               </ul>
@@ -71,3 +71,43 @@ const teachings = [
     ))
   }
 </div>
+
+<style>
+  .teachings {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .university {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  .subjects {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .subject {
+    font-weight: 600;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    list-style: disc;
+  }
+  .level {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--muted-foreground);
+  }
+  @media (min-width: 768px) {
+    .teachings {
+      flex-direction: row;
+    }
+  }
+</style>

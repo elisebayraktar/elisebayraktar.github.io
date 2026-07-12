@@ -3,7 +3,6 @@
   "semi": false,
   "singleQuote": true,
   "printWidth": 150,
-  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  "tailwindStylesheet": "./src/index.css",
+  "plugins": ["prettier-plugin-astro"],
   "overrides": [{ "files": "*.astro", "options": { "parser": "astro" } }]
 }

@@ -3,23 +3,53 @@ import Cambridge from '@/components/icons/cambridge.astro'
 import CentraleSupelec from '@/components/icons/centrale-suplec.astro'
 ---
 
-<div class="flex w-full flex-col justify-center gap-8 md:flex-row">
-  <div class="flex items-center space-x-7">
-    <Cambridge class="fill-base-content w-20" />
-    <div class="flex w-9/10 flex-col">
+<div class="education">
+  <div class="item">
+    <Cambridge />
+    <div class="info">
       <h3>University of Cambridge</h3>
       <div>Master of Advanced Study in Mathematics - Part III</div>
       <div>Part III Essay: Activated Random Walks</div>
-      <div class="text-sm text-muted-foreground">2020 - 2021</div>
+      <div class="year">2020 - 2021</div>
     </div>
   </div>
-  <div class="flex items-center space-x-7">
-    <CentraleSupelec class="w-20" />
-    <div class="flex w-9/10 flex-col">
+  <div class="item">
+    <CentraleSupelec />
+    <div class="info">
       <h3>CentraleSupélec</h3>
       <div>Master of Science in Engineering</div>
       <div>Grande École d'ingénieur</div>
-      <div class="text-sm text-muted-foreground">2018 - 2021</div>
+      <div class="year">2018 - 2021</div>
     </div>
   </div>
 </div>
+
+<style>
+  .education {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+  .info {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+  .year {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--muted-foreground);
+  }
+  @media (min-width: 768px) {
+    .education {
+      flex-direction: row;
+    }
+  }
+</style>

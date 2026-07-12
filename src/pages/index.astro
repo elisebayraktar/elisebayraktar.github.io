@@ -8,7 +8,6 @@ import Teachings from '@/components/sections/teachings.astro'
 import Separator from '@/components/ui/separator.astro'
 import Layout from '@/layouts/layout.astro'
 import { sections, type SectionSlug } from '@/lib/constants'
-import { cn } from '@/lib/utils'
 
 const sectionContent: Record<SectionSlug, typeof AboutMe> = {
   'about-me': AboutMe,
@@ -20,24 +19,19 @@ const sectionContent: Record<SectionSlug, typeof AboutMe> = {
 ---
 
 <Layout>
-  <div class="flex flex-col items-center">
+  <div class="page">
     <Header />
-    <main class="flex w-full flex-col items-center pt-8">
+    <main>
       {
         sections.map(({ slug, title }, index) => {
           const Content = sectionContent[slug]
           return (
-            <section
-              class={cn('flex w-full scroll-mt-20 flex-col items-center border-b bg-background py-20', {
-                'bg-card': index % 2 !== 0,
-              })}
-              id={slug}
-            >
-              <div class="container w-full px-8 md:px-20">
+            <section class:list={['section', { alt: index % 2 !== 0 }]} id={slug}>
+              <div class="container">
                 {slug !== 'about-me' && (
                   <>
-                    <h2 class="text-4xl font-extrabold uppercase">{title}</h2>
-                    <Separator class="my-4 mb-10 max-w-10" />
+                    <h2>{title}</h2>
+                    <Separator />
                   </>
                 )}
                 <Content />
@@ -49,3 +43,67 @@ const sectionContent: Record<SectionSlug, typeof AboutMe> = {
     </main>
   </div>
 </Layout>
+
+<style>
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  .section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 5rem;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
+    padding-block: 5rem;
+  }
+  .section.alt {
+    background-color: var(--card);
+  }
+  .container {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding-inline: 5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+    }
+  }
+</style>
