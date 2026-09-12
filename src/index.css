@@ -25,6 +25,7 @@
   --foreground: hsl(191 0% 0%);
   --card: hsl(191 0% 90%);
   --primary: hsl(191 100% 22%);
+  --link: hsl(191 100% 18%);
   --muted-foreground: hsl(191 0% 28%);
   --accent: hsl(153 10% 80%);
   --accent-foreground: hsl(191 0% 10%);
@@ -37,6 +38,7 @@
   --foreground: hsl(191 0% 90%);
   --card: hsl(191 0% 0%);
   --primary: hsl(191 100% 35%);
+  --link: var(--primary);
   --muted-foreground: hsl(191 0% 72%);
   --accent: hsl(153 10% 15%);
   --accent-foreground: hsl(191 0% 90%);
