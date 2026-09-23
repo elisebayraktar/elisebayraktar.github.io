@@ -21,29 +21,29 @@
 }
 
 :root {
-  --background: hsl(191 0% 95%);
-  --foreground: hsl(191 0% 0%);
-  --card: hsl(191 0% 90%);
-  --primary: hsl(191 100% 22%);
-  --link: hsl(191 100% 18%);
-  --muted-foreground: hsl(191 0% 28%);
-  --accent: hsl(153 10% 80%);
-  --accent-foreground: hsl(191 0% 10%);
-  --border: hsl(191 20% 50%);
-  --ring: hsl(191 100% 28.4%);
+  --background: #f2f2f2;
+  --foreground: #000000;
+  --card: #e6e6e6;
+  --primary: #005c70;
+  --link: #004b5c;
+  --muted-foreground: #474747;
+  --accent: #c7d1cd;
+  --accent-foreground: #1a1a1a;
+  --border: #669099;
+  --ring: #007691;
 }
 
 .dark {
-  --background: hsl(191 10% 5%);
-  --foreground: hsl(191 0% 90%);
-  --card: hsl(191 0% 0%);
-  --primary: hsl(191 100% 35%);
+  --background: #242427;
+  --foreground: #e6e6e6;
+  --card: #19191c;
+  --primary: #0092b3;
   --link: var(--primary);
-  --muted-foreground: hsl(191 0% 72%);
-  --accent: hsl(153 10% 15%);
-  --accent-foreground: hsl(191 0% 90%);
-  --border: hsl(191 20% 18%);
-  --ring: hsl(191 100% 28.4%);
+  --muted-foreground: #b8b8b8;
+  --accent: #222a27;
+  --accent-foreground: #e6e6e6;
+  --border: #253437;
+  --ring: #007691;
 }
 
 *,
