@@ -3,6 +3,26 @@ import Link from '@/components/ui/link.astro'
 
 const talks = [
   {
+    dateAndPlace: 'Université Paris Nanterre (September 24 2026)',
+    label: "Séminaire MODAL'X",
+    link: 'https://modalx.parisnanterre.fr/seminaires',
+  },
+  {
+    dateAndPlace: 'KIT Royal Tropical Institute Amsterdam (August 18 2026)',
+    label: 'Conference on Uncertainty in Artificial Intelligence (UAI - Poster)',
+    link: 'https://www.auai.org/uai2026/',
+  },
+  {
+    dateAndPlace: 'Université Clermont Auvergne (June 1 and 4 2026)',
+    label: 'Journées de Statistiques',
+    link: 'https://jds2026.sciencesconf.org/',
+  },
+  {
+    dateAndPlace: "Université d'Evry Val d'Essonne (April 9 2026)",
+    label: 'Séminaire de probabilités et mathématiques financières du LaMME',
+    link: 'http://www.math-evry.cnrs.fr/evenements/seminaireproba-math-fi',
+  },
+  {
     dateAndPlace: "Centre Inria de l'Université de Lorraine (March 23 2026)",
     label: "Séminaire de l'équipe Inria PASTA",
     link: 'https://team.inria.fr/pasta/fr/francais-efficient-estimation-of-jump-parameters-for-stochastic-differential-equations-driven-by-levy-processes-elise-bayraktar-sorbonne-universite/',
@@ -71,13 +91,11 @@ const talks = [
 ---
 
 <ul>
-  {
-    talks.map((talk) => (
-      <li>
-        <Link href={talk.link}>{talk.label}</Link> - {talk.dateAndPlace}
-      </li>
-    ))
-  }
+  {talks.map((talk) => (
+    <li>
+      <Link href={talk.link}>{talk.label}</Link> - {talk.dateAndPlace}
+    </li>
+  ))}
 </ul>
 
 <style>
