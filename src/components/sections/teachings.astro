@@ -3,7 +3,11 @@ const teachings = [
   {
     details: [
       {
-        group: [{ level: 'L3', year: '2025-2026' }],
+        group: [{ level: 'M2 Ingénierie Mathématique', year: '2026-2026' }],
+        subject: 'Séries Chronologiques',
+      },
+      {
+        group: [{ level: 'L3 Science des données', year: '2025-2026' }],
         subject: 'Probabilités 2',
       },
     ],
@@ -49,27 +53,25 @@ const teachings = [
 ---
 
 <div class="teachings">
-  {
-    teachings.map(({ details, university }) => (
-      <div class="university">
-        <h3>{university}</h3>
-        <div class="subjects">
-          {details.map(({ group, subject }) => (
-            <div>
-              <div class="subject">{subject}</div>
-              <ul>
-                {group.map(({ level, year }) => (
-                  <li>
-                    <b>{year}</b> - <span class="level">{level}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+  {teachings.map(({ details, university }) => (
+    <div class="university">
+      <h3>{university}</h3>
+      <div class="subjects">
+        {details.map(({ group, subject }) => (
+          <div>
+            <div class="subject">{subject}</div>
+            <ul>
+              {group.map(({ level, year }) => (
+                <li>
+                  <b>{year}</b> - <span class="level">{level}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    ))
-  }
+    </div>
+  ))}
 </div>
 
 <style>
