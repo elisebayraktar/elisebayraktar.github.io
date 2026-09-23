@@ -11,6 +11,6 @@ export const sections: SectionMeta[] = [
   { iconName: 'User', slug: 'about-me', title: 'About me' },
   { iconName: 'Book', slug: 'publications', title: 'Publications' },
   { iconName: 'Presentation', slug: 'talks', title: 'Talks' },
-  { iconName: 'GraduationCap', slug: 'education', title: 'Education' },
   { iconName: 'Pencil', slug: 'teaching', title: 'Teaching' },
+  { iconName: 'GraduationCap', slug: 'education', title: 'Education' },
 ]
